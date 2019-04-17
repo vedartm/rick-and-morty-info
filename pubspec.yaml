@@ -10,6 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^0.1.2
+  graphql_flutter: ^0.9.5
+  # cached_network_image: ^0.7.0
 
 dev_dependencies:
   flutter_test:
