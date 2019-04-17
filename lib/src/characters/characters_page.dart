@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:rick_and_morty_info/src/models/character.dart';
+import 'package:rick_and_morty_info/src/widgets/characters_card.dart';
 
 class CharactersPage extends StatefulWidget {
   @override
@@ -47,12 +48,7 @@ class _CharactersPageState extends State<CharactersPage> {
           itemCount: characters.length,
           itemBuilder: (BuildContext context, int index) {
             final Character character = Character.fromJson(characters[index]);
-            return Card(
-              margin: const EdgeInsets.all(10.0),
-              child: ListTile(
-                title: Text(character.name),
-              ),
-            );
+            return CharacterCard(character: character);
           },
         );
       },
