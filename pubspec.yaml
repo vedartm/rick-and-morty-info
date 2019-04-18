@@ -9,9 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^0.1.2
   graphql_flutter: ^0.9.5
-  # cached_network_image: ^0.7.0
+  cupertino_icons: ^0.1.2
 
 dev_dependencies:
   flutter_test:
@@ -22,6 +21,6 @@ flutter:
   fonts:
     - family: Randm
       fonts:
-        - asset: fonts/Regular.ttf
-        # - asset: fonts/Medium.ttf
+        # - asset: fonts/Regular.ttf
+        - asset: fonts/Medium.ttf
         #   weight: 700
