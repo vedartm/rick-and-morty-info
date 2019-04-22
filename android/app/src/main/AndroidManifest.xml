@@ -10,7 +10,7 @@
 
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="rick_and_morty_info"
+        android:label="Rick and Morty Universe"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
