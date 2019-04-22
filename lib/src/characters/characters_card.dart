@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rick_and_morty_info/src/characters/characters_bloc.dart';
+import 'package:rick_and_morty_info/src/characters/characters_bloc_provider.dart';
 import 'package:rick_and_morty_info/src/models/character.dart';
 
 class CharacterCard extends StatelessWidget {
@@ -9,20 +11,21 @@ class CharacterCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        constraints: const BoxConstraints(
-          minHeight: 110,
-          maxHeight: 131,
-        ),
-        margin: const EdgeInsets.symmetric(
-          vertical: 16.0,
-          horizontal: 24.0,
-        ),
-        child: Stack(
-          children: <Widget>[
-            characterCard(),
-            characterThumbnail(),
-          ],
-        ));
+      constraints: const BoxConstraints(
+        minHeight: 110,
+        maxHeight: 131,
+      ),
+      margin: const EdgeInsets.symmetric(
+        vertical: 16.0,
+        horizontal: 24.0,
+      ),
+      child: Stack(
+        children: <Widget>[
+          characterCard(context),
+          characterThumbnail(),
+        ],
+      ),
+    );
   }
 
   Widget characterThumbnail() {
@@ -36,11 +39,10 @@ class CharacterCard extends StatelessWidget {
     );
   }
 
-  Widget characterCard() {
+  Widget characterCard(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(left: 46.0),
       decoration: BoxDecoration(
-        // color: const Color(0xFFe89ac7),
         color: Colors.blueAccent,
         shape: BoxShape.rectangle,
         borderRadius: BorderRadius.circular(8.0),
@@ -52,11 +54,12 @@ class CharacterCard extends StatelessWidget {
           ),
         ],
       ),
-      child: cardContent(),
+      child: cardContent(context),
     );
   }
 
-  Widget cardContent() {
+  Widget cardContent(BuildContext context) {
+    final CharactersBloc _bloc = CharactersBlocProvider.of(context);
     return Container(
       alignment: FractionalOffset.center,
       margin: const EdgeInsets.fromLTRB(66.0, 16.0, 16.0, 16.0),
@@ -69,25 +72,30 @@ class CharacterCard extends StatelessWidget {
             character.name,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 10),
           Text(
             'Species - ${character.species}',
-            style: TextStyle(color: Colors.white70, fontSize: 18),
+            style: const TextStyle(color: Colors.white70, fontSize: 18),
           ),
           const SizedBox(height: 8),
           Row(
             children: <Widget>[
-              Text(
-                'Gender - ${character.gender}',
+              const Text(
+                'Status - ',
                 style: TextStyle(color: Colors.white70, fontSize: 16),
               ),
+              Icon(_bloc.getStatusIcon(character.status)),
               const SizedBox(width: 16),
-              Text(
-                'Status - ${character.status}',
-                style: TextStyle(color: Colors.white70, fontSize: 16),
+              Flexible(
+                child: Text(
+                  'Gender - ${character.gender}',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(color: Colors.white70, fontSize: 16),
+                ),
               ),
             ],
           ),
