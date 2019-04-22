@@ -1,6 +1,4 @@
 class Episode {
-  Episode({this.id, this.name, this.airDate, this.episode});
-
   Episode.fromJson(Map<String, dynamic> json)
       : id = json['id'],
         name = json['name'],
