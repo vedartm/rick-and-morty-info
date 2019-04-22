@@ -6,11 +6,11 @@ class LocationsBloc {
     cache: InMemoryCache(),
   );
 
-  Future<List<Map<String, dynamic>>> queryEpisodes(int page) async {
+  Future<List<Map<String, dynamic>>> queryLocations(int page) async {
     final Map<String, dynamic> data = await client.query(
       // query: readChars,
       query: 'query {' +
-          ' episodes(page: $page) {' +
+          ' locations(page: $page) {' +
           '   info {' +
           '     count' +
           '     pages' +
@@ -18,13 +18,15 @@ class LocationsBloc {
           '   results {' +
           '     id' +
           '     name' +
+          '     dimension' +
+          '     type' +
           '   }' +
           ' }' +
           '}',
     );
 
-    final List<Map<String, dynamic>> episodes =
-        data['episodes']['results'].cast<Map<String, dynamic>>();
-    return episodes;
+    final List<Map<String, dynamic>> locations =
+        data['locations']['results'].cast<Map<String, dynamic>>();
+    return locations;
   }
 }

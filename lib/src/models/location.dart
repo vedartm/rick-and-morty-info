@@ -1,5 +1,4 @@
 class Location {
-  Location(this.id, this.name, this.dimension, this.type);
   Location.fromJson(Map<String, dynamic> json)
       : id = json['id'],
         name = json['name'],
