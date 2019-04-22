@@ -21,11 +21,12 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
-
 def keystoreProperties = new Properties()
 def keystorePropertiesFile = rootProject.file('key.properties')
 if (keystorePropertiesFile.exists()) {
-    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+    keystorePropertiesFile.withReader('UTF-8') { reader ->
+        keystoreProperties.load(reader)
+    }
 }
 
 apply plugin: 'com.android.application'
@@ -48,10 +49,10 @@ android {
     }
     signingConfigs {
         release {
-            keyAlias keystoreProperties['alias'] 
-            keyPassword keystoreProperties['password']
-            storePassword keystoreProperties['password']
-            storeFile file(keystoreProperties['fileLocation'])
+            keyAlias keystoreProperties?keystoreProperties['alias']:'temp' 
+            keyPassword keystoreProperties?keystoreProperties['password']:'temp' 
+            storePassword keystoreProperties?keystoreProperties['password']:'temp' 
+            storeFile file(keystoreProperties?keystoreProperties['fileLocation']:'temp')
         }
     }
     buildTypes {
