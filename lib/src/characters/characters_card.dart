@@ -87,7 +87,10 @@ class CharacterCard extends StatelessWidget {
                 'Status - ',
                 style: TextStyle(color: Colors.white70, fontSize: 16),
               ),
-              Icon(_bloc.getStatusIcon(character.status)),
+              Icon(
+                _bloc.getStatusIcon(character.status),
+                color: Colors.white,
+              ),
               const SizedBox(width: 16),
               Flexible(
                 child: Text(
