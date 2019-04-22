@@ -49,10 +49,10 @@ android {
     }
     signingConfigs {
         release {
-            keyAlias keystoreProperties?keystoreProperties['alias']:'temp' 
-            keyPassword keystoreProperties?keystoreProperties['password']:'temp' 
-            storePassword keystoreProperties?keystoreProperties['password']:'temp' 
-            storeFile file(keystoreProperties?keystoreProperties['fileLocation']:'temp')
+            keyAlias keystoreProperties?keystoreProperties['keyAlias']:'temp' 
+            keyPassword keystoreProperties?keystoreProperties['keyPassword']:'temp' 
+            storePassword keystoreProperties?keystoreProperties['storePassword']:'temp' 
+            storeFile file(keystoreProperties?keystoreProperties['storeFile']:'temp')
         }
     }
     buildTypes {
