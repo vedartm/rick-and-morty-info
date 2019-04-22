@@ -1,14 +1,4 @@
 class Character {
-  const Character({
-    this.id,
-    this.name,
-    this.status,
-    this.species,
-    this.type,
-    this.gender,
-    this.image,
-  });
-
   Character.fromJson(Map<String, dynamic> json)
       : id = json['id'],
         name = json['name'],
