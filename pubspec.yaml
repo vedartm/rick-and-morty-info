@@ -9,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  graphql_flutter: ^0.9.5
+  graphql_flutter: ^2.0.0
   cupertino_icons: ^0.1.2
 
 dev_dependencies:

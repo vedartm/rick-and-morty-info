@@ -4,35 +4,34 @@ import 'package:flutter/material.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 
 class CharactersBloc {
-  Client client = Client(
-    endPoint: 'https://rickandmortyapi.com/graphql',
+  static HttpLink link = HttpLink(uri: 'https://rickandmortyapi.com/graphql');
+  GraphQLClient client = GraphQLClient(
     cache: InMemoryCache(),
+    link: link,
   );
 
   Future<List<Map<String, dynamic>>> queryCharacters(int page) async {
-    final Map<String, dynamic> data = await client.query(
-      // query: readChars,
-      query: 'query {' +
-          ' characters(page: $page) {' +
-          '   info {' +
-          '     count' +
-          '     pages' +
-          '   }' +
-          '   results {' +
-          '     id' +
-          '     name' +
-          '     image' +
-          '     type' +
-          '     status' +
-          '     species' +
-          '     gender' +
-          '   }' +
-          ' }' +
-          '}',
-    );
+    final QueryResult data = await client.query(QueryOptions(
+        document: 'query {' +
+            ' characters(page: $page) {' +
+            '   info {' +
+            '     count' +
+            '     pages' +
+            '   }' +
+            '   results {' +
+            '     id' +
+            '     name' +
+            '     image' +
+            '     type' +
+            '     status' +
+            '     species' +
+            '     gender' +
+            '   }' +
+            ' }' +
+            '}'));
 
     final List<Map<String, dynamic>> characters =
-        data['characters']['results'].cast<Map<String, dynamic>>();
+        data.data['characters']['results'].cast<Map<String, dynamic>>();
     return characters;
   }
 

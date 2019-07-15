@@ -1,15 +1,13 @@
 import 'package:graphql_flutter/graphql_flutter.dart';
 
 class LocationsBloc {
-  Client client = Client(
-    endPoint: 'https://rickandmortyapi.com/graphql',
-    cache: InMemoryCache(),
-  );
+  static HttpLink link = HttpLink(uri: 'https://rickandmortyapi.com/graphql');
+  GraphQLClient client = GraphQLClient(cache: InMemoryCache(), link: link);
 
   Future<List<Map<String, dynamic>>> queryLocations(int page) async {
-    final Map<String, dynamic> data = await client.query(
+    final QueryResult data = await client.query(QueryOptions(
       // query: readChars,
-      query: 'query {' +
+      document: 'query {' +
           ' locations(page: $page) {' +
           '   info {' +
           '     count' +
@@ -23,10 +21,10 @@ class LocationsBloc {
           '   }' +
           ' }' +
           '}',
-    );
+    ));
 
     final List<Map<String, dynamic>> locations =
-        data['locations']['results'].cast<Map<String, dynamic>>();
+        data.data['locations']['results'].cast<Map<String, dynamic>>();
     return locations;
   }
 }
