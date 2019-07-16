@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'Randm',
-        brightness: Brightness.light,
+        brightness: Brightness.dark,
       ),
       home: MyHomePage(),
     );

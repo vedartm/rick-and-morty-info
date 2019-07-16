@@ -27,7 +27,7 @@ class EpisodesCard extends StatelessWidget {
         children: <Widget>[
           Text(
             episode.episode,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.white70,
                 fontSize: 18,
                 fontWeight: FontWeight.bold),
@@ -37,13 +37,13 @@ class EpisodesCard extends StatelessWidget {
             episode.name,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 8),
           Text(
             episode.airDate,
-            style: TextStyle(color: Colors.white70, fontSize: 14),
+            style: const TextStyle(color: Colors.white70, fontSize: 14),
           ),
         ],
       ),
