@@ -26,22 +26,18 @@ class _EpisodesPageState extends State<EpisodesPage> {
           future: _bloc.queryEpisodes(index + 1),
           builder: (BuildContext context,
               AsyncSnapshot<List<Map<String, dynamic>>> snapshot) {
-            switch (snapshot.connectionState) {
-              case ConnectionState.none:
-              case ConnectionState.active:
-              case ConnectionState.waiting:
-                return SizedBox(
-                  height: MediaQuery.of(context).size.height * 2,
-                  child: const Align(
-                      alignment: Alignment.topCenter,
-                      child: CircularProgressIndicator()),
-                );
-              case ConnectionState.done:
-                if (snapshot.hasError) {
-                  return Center(child: Text('Error : ${snapshot.error}'));
-                } else {
-                  return _buildPage(snapshot.data);
-                }
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return SizedBox(
+                height: MediaQuery.of(context).size.height * 2,
+                child: const Align(
+                    alignment: Alignment.topCenter,
+                    child: CircularProgressIndicator()),
+              );
+            }
+            if (snapshot.hasError) {
+              return Center(child: Text('Error : ${snapshot.error}'));
+            } else {
+              return _buildPage(snapshot.data);
             }
           },
         );

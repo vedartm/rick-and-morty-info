@@ -11,24 +11,28 @@ class CharactersBloc {
   );
 
   Future<List<Map<String, dynamic>>> queryCharacters(int page) async {
-    final QueryResult data = await client.query(QueryOptions(
-        document: 'query {' +
-            ' characters(page: $page) {' +
-            '   info {' +
-            '     count' +
-            '     pages' +
-            '   }' +
-            '   results {' +
-            '     id' +
-            '     name' +
-            '     image' +
-            '     type' +
-            '     status' +
-            '     species' +
-            '     gender' +
-            '   }' +
-            ' }' +
-            '}'));
+    final QueryResult data = await client.query(
+      QueryOptions(
+        document: '''
+        query { 
+             characters(page: $page) { 
+               info {
+                 count
+                 pages
+               }
+               results { 
+                 id
+                 name
+                 image
+                 type
+                 status
+                 species
+                 gender
+               }
+             }
+            }''',
+      ),
+    );
 
     final List<Map<String, dynamic>> characters =
         data.data['characters']['results'].cast<Map<String, dynamic>>();

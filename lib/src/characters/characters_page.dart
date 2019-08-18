@@ -28,23 +28,19 @@ class _CharactersPageState extends State<CharactersPage> {
             future: _bloc.queryCharacters(index + 1),
             builder: (BuildContext context,
                 AsyncSnapshot<List<Map<String, dynamic>>> snapshot) {
-              switch (snapshot.connectionState) {
-                case ConnectionState.none:
-                case ConnectionState.active:
-                case ConnectionState.waiting:
-                  return SizedBox(
-                    height: MediaQuery.of(context).size.height * 2,
-                    child: const Align(
-                        alignment: Alignment.topCenter,
-                        child: CircularProgressIndicator()),
-                  );
-                case ConnectionState.done:
-                  if (snapshot.hasError) {
-                    return Text('Error : ${snapshot.error}');
-                  } else {
-                    final List<Map<String, dynamic>> page = snapshot.data;
-                    return _buildPage(page);
-                  }
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return SizedBox(
+                  height: MediaQuery.of(context).size.height * 2,
+                  child: const Align(
+                      alignment: Alignment.topCenter,
+                      child: CircularProgressIndicator()),
+                );
+              }
+              if (snapshot.hasError) {
+                return Text('Error : ${snapshot.error}');
+              } else {
+                final List<Map<String, dynamic>> page = snapshot.data;
+                return _buildPage(page);
               }
             },
           );

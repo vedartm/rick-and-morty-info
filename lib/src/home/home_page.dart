@@ -47,6 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
               return EpisodesPage();
             case NavBarItem.LOCATIONS:
               return LocationsPage();
+            default:
+              return CharactersPage();
           }
         },
       ),
