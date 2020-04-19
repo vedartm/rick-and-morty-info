@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_info/src/characters/characters_bloc.dart';
+
+import 'characters_bloc.dart';
 
 class CharactersBlocProvider extends InheritedWidget {
   CharactersBlocProvider({Key key, Widget child})
@@ -11,8 +12,8 @@ class CharactersBlocProvider extends InheritedWidget {
   bool updateShouldNotify(CharactersBlocProvider oldWidget) => true;
 
   static CharactersBloc of(BuildContext context) {
-    final CharactersBlocProvider provider =
-        context.inheritFromWidgetOfExactType(CharactersBlocProvider);
+    final provider =
+        context.dependOnInheritedWidgetOfExactType<CharactersBlocProvider>();
     return provider.bloc;
   }
 }

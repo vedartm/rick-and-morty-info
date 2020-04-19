@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_info/src/episodes/episodes_bloc.dart';
-import 'package:rick_and_morty_info/src/episodes/episodes_card.dart';
-import 'package:rick_and_morty_info/src/models/episode.dart';
+
+import '../models/episode.dart';
+import 'episodes_bloc.dart';
+import 'episodes_card.dart';
 
 class EpisodesPage extends StatefulWidget {
   @override
@@ -21,11 +22,10 @@ class _EpisodesPageState extends State<EpisodesPage> {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: 2,
-      itemBuilder: (BuildContext context, int index) {
+      itemBuilder: (context, index) {
         return FutureBuilder<List<Map<String, dynamic>>>(
           future: _bloc.queryEpisodes(index + 1),
-          builder: (BuildContext context,
-              AsyncSnapshot<List<Map<String, dynamic>>> snapshot) {
+          builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return SizedBox(
                 height: MediaQuery.of(context).size.height * 2,
@@ -74,8 +74,8 @@ class _EpisodesPageState extends State<EpisodesPage> {
     return ListView(
       shrinkWrap: true,
       primary: false,
-      children: page.map<Widget>((Map<String, dynamic> item) {
-        final Episode episode = Episode.fromJson(item);
+      children: page.map<Widget>((item) {
+        final episode = Episode.fromJson(item);
         return EpisodesCard(episode: episode);
       }).toList(),
     );

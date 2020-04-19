@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_info/src/models/location.dart';
+
+import '../models/location.dart';
 
 class LocationsCard extends StatelessWidget {
   const LocationsCard({Key key, this.location}) : super(key: key);

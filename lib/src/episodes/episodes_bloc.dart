@@ -8,7 +8,7 @@ class EpisodesBloc {
   );
 
   Future<List<Map<String, dynamic>>> queryEpisodes(int page) async {
-    final QueryResult data = await client.query(QueryOptions(
+    final data = await client.query(QueryOptions(
       // query: readChars,
       document: '''query {
            episodes(page: $page) {

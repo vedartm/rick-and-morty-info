@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_info/src/characters/characters_bloc.dart';
-import 'package:rick_and_morty_info/src/characters/characters_bloc_provider.dart';
-import 'package:rick_and_morty_info/src/models/character.dart';
+
+import '../models/character.dart';
+import 'characters_bloc_provider.dart';
 
 class CharacterCard extends StatelessWidget {
   const CharacterCard({Key key, this.character}) : super(key: key);
@@ -59,7 +59,7 @@ class CharacterCard extends StatelessWidget {
   }
 
   Widget cardContent(BuildContext context) {
-    final CharactersBloc _bloc = CharactersBlocProvider.of(context);
+    final _bloc = CharactersBlocProvider.of(context);
     return Container(
       alignment: FractionalOffset.center,
       margin: const EdgeInsets.fromLTRB(66.0, 16.0, 16.0, 16.0),

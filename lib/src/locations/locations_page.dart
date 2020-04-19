@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_info/src/locations/locations_bloc.dart';
-import 'package:rick_and_morty_info/src/locations/locations_card.dart';
-import 'package:rick_and_morty_info/src/models/location.dart';
+
+import '../models/location.dart';
+import 'locations_bloc.dart';
+import 'locations_card.dart';
 
 class LocationsPage extends StatefulWidget {
   @override
@@ -21,11 +22,10 @@ class _LocationsPageState extends State<LocationsPage> {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: 4,
-      itemBuilder: (BuildContext context, int index) {
+      itemBuilder: (context, index) {
         return FutureBuilder<List<Map<String, dynamic>>>(
           future: _bloc.queryLocations(index + 1),
-          builder: (BuildContext context,
-              AsyncSnapshot<List<Map<String, dynamic>>> snapshot) {
+          builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return SizedBox(
                 height: MediaQuery.of(context).size.height * 2,
@@ -49,8 +49,8 @@ class _LocationsPageState extends State<LocationsPage> {
     return ListView(
       shrinkWrap: true,
       primary: false,
-      children: page.map<Widget>((Map<String, dynamic> item) {
-        final Location location = Location.fromJson(item);
+      children: page.map<Widget>((item) {
+        final location = Location.fromJson(item);
         return LocationsCard(location: location);
       }).toList(),
     );

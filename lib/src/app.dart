@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_info/src/home/home_page.dart';
+
+import 'home/home_page.dart';
 
 class MyApp extends StatelessWidget {
   @override

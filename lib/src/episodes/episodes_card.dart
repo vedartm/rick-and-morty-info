@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_info/src/models/episode.dart';
+
+import '../models/episode.dart';
 
 class EpisodesCard extends StatelessWidget {
   const EpisodesCard({Key key, this.episode}) : super(key: key);

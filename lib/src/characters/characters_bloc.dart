@@ -11,7 +11,7 @@ class CharactersBloc {
   );
 
   Future<List<Map<String, dynamic>>> queryCharacters(int page) async {
-    final QueryResult data = await client.query(
+    final data = await client.query(
       QueryOptions(
         document: '''
         query { 
@@ -40,7 +40,7 @@ class CharactersBloc {
   }
 
   Stream<List<Map<String, dynamic>>> getCharactersStream(int page) {
-    final Future<List<Map<String, dynamic>>> future = queryCharacters(page);
+    final future = queryCharacters(page);
     return Stream<List<Map<String, dynamic>>>.fromFuture(future);
   }
 

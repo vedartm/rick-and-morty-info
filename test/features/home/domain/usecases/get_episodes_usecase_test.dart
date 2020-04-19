@@ -1,0 +1,37 @@
+import 'package:dartz/dartz.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/mockito.dart';
+import 'package:rick_and_morty_info/features/home/domain/entities/episode.dart';
+import 'package:rick_and_morty_info/features/home/domain/repositories/i_home_repository.dart';
+import 'package:rick_and_morty_info/features/home/domain/usecases/get_episodes_usecase.dart';
+
+class MockHomeRepository extends Mock implements IHomeRepository {}
+
+void main() {
+  MockHomeRepository mockRepository;
+  GetEpisodesUseCase usecase;
+
+  setUp(() {
+    mockRepository = MockHomeRepository();
+    usecase = GetEpisodesUseCase(mockRepository);
+  });
+
+  final tEpisodes = [
+    Episode(
+      id: 1,
+      name: 'Pilot',
+      airDate: 'December 2, 2013',
+      episode: 'S01E01',
+    )
+  ];
+
+  test('should return list of episodes when requested with offset', () async {
+    // arrange
+    when(mockRepository.getEpisodes())
+        .thenAnswer((_) async => await Right(tEpisodes));
+    // act
+    final result = await usecase(EpisodeParams(1));
+    // assert
+    expect(result, equals(Right(tEpisodes)));
+  });
+}

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_info/src/characters/characters_bloc.dart';
-import 'package:rick_and_morty_info/src/characters/characters_bloc_provider.dart';
-import 'package:rick_and_morty_info/src/characters/characters_card.dart';
-import 'package:rick_and_morty_info/src/models/character.dart';
+
+import '../models/character.dart';
+import 'characters_bloc.dart';
+import 'characters_bloc_provider.dart';
+import 'characters_card.dart';
 
 class CharactersPage extends StatefulWidget {
   @override
@@ -23,11 +24,10 @@ class _CharactersPageState extends State<CharactersPage> {
     return CharactersBlocProvider(
       child: ListView.builder(
         itemCount: 25,
-        itemBuilder: (BuildContext context, int index) {
+        itemBuilder: (context, index) {
           return FutureBuilder<List<Map<String, dynamic>>>(
             future: _bloc.queryCharacters(index + 1),
-            builder: (BuildContext context,
-                AsyncSnapshot<List<Map<String, dynamic>>> snapshot) {
+            builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return SizedBox(
                   height: MediaQuery.of(context).size.height * 2,
@@ -39,7 +39,7 @@ class _CharactersPageState extends State<CharactersPage> {
               if (snapshot.hasError) {
                 return Text('Error : ${snapshot.error}');
               } else {
-                final List<Map<String, dynamic>> page = snapshot.data;
+                final page = snapshot.data;
                 return _buildPage(page);
               }
             },
@@ -53,8 +53,8 @@ class _CharactersPageState extends State<CharactersPage> {
     return ListView(
       shrinkWrap: true,
       primary: false,
-      children: page.map<Widget>((Map<String, dynamic> item) {
-        final Character character = Character.fromJson(item);
+      children: page.map<Widget>((item) {
+        final character = Character.fromJson(item);
         return CharacterCard(character: character);
       }).toList(),
     );

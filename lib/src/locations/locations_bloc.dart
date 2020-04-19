@@ -5,7 +5,7 @@ class LocationsBloc {
   GraphQLClient client = GraphQLClient(cache: InMemoryCache(), link: link);
 
   Future<List<Map<String, dynamic>>> queryLocations(int page) async {
-    final QueryResult data = await client.query(QueryOptions(
+    final data = await client.query(QueryOptions(
       // query: readChars,
       document: '''query {
            locations(page: $page) {

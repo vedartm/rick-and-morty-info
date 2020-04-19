@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_info/src/characters/characters_page.dart';
-import 'package:rick_and_morty_info/src/episodes/episodes_page.dart';
-import 'package:rick_and_morty_info/src/home/home_bloc.dart';
-import 'package:rick_and_morty_info/src/locations/locations_page.dart';
+
+import '../characters/characters_page.dart';
+import '../episodes/episodes_page.dart';
+import '../locations/locations_page.dart';
+import 'home_bloc.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -39,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: StreamBuilder<NavBarItem>(
         stream: _homeBloc.itemStream,
         initialData: _homeBloc.defaultItem,
-        builder: (BuildContext context, AsyncSnapshot<NavBarItem> snapshot) {
+        builder: (context, snapshot) {
           switch (snapshot.data) {
             case NavBarItem.CHARACTERS:
               return CharactersPage();
@@ -55,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: StreamBuilder<NavBarItem>(
         stream: _homeBloc.itemStream,
         initialData: _homeBloc.defaultItem,
-        builder: (BuildContext context, AsyncSnapshot<NavBarItem> snapshot) {
+        builder: (context, snapshot) {
           return BottomNavigationBar(
             fixedColor: Colors.blueAccent,
             currentIndex: snapshot.data.index,
