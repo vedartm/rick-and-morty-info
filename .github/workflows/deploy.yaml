@@ -3,8 +3,6 @@ name: deploy
 on:
   push:
     branches: [master]
-  pull_request:
-    branches: [master]
 
 jobs:
   deploy:
@@ -19,7 +17,6 @@ jobs:
           channel: "beta"
       - run: flutter pub get
       - run: flutter analyze
-        if: github.event_name != 'pull_request'
       - uses: actions/setup-java@v1
         with:
           java-version: "12.x"
