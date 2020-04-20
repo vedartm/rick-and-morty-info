@@ -1,0 +1,31 @@
+name: deploy
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: macos-latest
+    needs: [drive_ios, drive_android, test]
+    name: Build  apk  and web
+    steps:
+      - uses: actions/checkout@v1
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: "1.15.17"
+          channel: "beta"
+      - run: flutter pub get
+      - run: flutter analyze
+        if: github.event_name != 'pull_request'
+      - uses: actions/setup-java@v1
+        with:
+          java-version: "12.x"
+      - run: flutter build apk --debug --split-per-abi
+      - name: Create a Release APK
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/app/outputs/apk/debug/*.apk"
+          token: ${{ secrets.GITHUB_TOKEN }}
