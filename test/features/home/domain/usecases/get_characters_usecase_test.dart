@@ -20,7 +20,7 @@ void main() {
   final tPage = 1;
   final tCharacters = [
     Character(
-      id: 1,
+      id: '1',
       name: 'Rick Sanchez',
       vitalStatus: const VitalStatus.alive(),
       gender: const Gender.male(),

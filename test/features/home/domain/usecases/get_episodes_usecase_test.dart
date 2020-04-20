@@ -19,7 +19,7 @@ void main() {
   final tPage = 1;
   final tEpisodes = [
     Episode(
-      id: 1,
+      id: '1',
       name: 'Pilot',
       airDate: 'December 2, 2013',
       episode: 'S01E01',

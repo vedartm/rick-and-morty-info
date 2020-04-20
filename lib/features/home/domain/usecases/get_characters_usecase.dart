@@ -1,10 +1,12 @@
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
 
 import '../../../../core/error/failures.dart';
 import '../../../../core/usecase/usecase.dart';
 import '../entities/character.dart';
 import '../repositories/i_home_repository.dart';
 
+@lazySingleton
 class GetCharactersUseCase extends UseCase<List<Character>, CharacterParams> {
   GetCharactersUseCase(this.repository);
 

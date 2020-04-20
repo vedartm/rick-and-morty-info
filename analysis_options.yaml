@@ -18,3 +18,4 @@ analyzer:
     lines_longer_than_80_chars: ignore
     one_member_abstracts: ignore
     todo: ignore
+    constant_identifier_names: ignore

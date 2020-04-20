@@ -19,7 +19,7 @@ void main() {
   final tPage = 1;
   final tLocations = [
     Location(
-      id: 1,
+      id: '1',
       name: 'Pilot',
       type: 'Planet',
       dimension: 'Dimension C-137',

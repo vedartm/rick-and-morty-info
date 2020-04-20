@@ -13,7 +13,7 @@ class _$EpisodeTearOff {
   const _$EpisodeTearOff();
 
   _Episode call(
-      {@required int id,
+      {@required String id,
       @required String name,
       @required String airDate,
       @required String episode}) {
@@ -30,7 +30,7 @@ class _$EpisodeTearOff {
 const $Episode = _$EpisodeTearOff();
 
 mixin _$Episode {
-  int get id;
+  String get id;
   String get name;
   String get airDate;
   String get episode;
@@ -41,7 +41,7 @@ mixin _$Episode {
 abstract class $EpisodeCopyWith<$Res> {
   factory $EpisodeCopyWith(Episode value, $Res Function(Episode) then) =
       _$EpisodeCopyWithImpl<$Res>;
-  $Res call({int id, String name, String airDate, String episode});
+  $Res call({String id, String name, String airDate, String episode});
 }
 
 class _$EpisodeCopyWithImpl<$Res> implements $EpisodeCopyWith<$Res> {
@@ -59,7 +59,7 @@ class _$EpisodeCopyWithImpl<$Res> implements $EpisodeCopyWith<$Res> {
     Object episode = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
+      id: id == freezed ? _value.id : id as String,
       name: name == freezed ? _value.name : name as String,
       airDate: airDate == freezed ? _value.airDate : airDate as String,
       episode: episode == freezed ? _value.episode : episode as String,
@@ -71,7 +71,7 @@ abstract class _$EpisodeCopyWith<$Res> implements $EpisodeCopyWith<$Res> {
   factory _$EpisodeCopyWith(_Episode value, $Res Function(_Episode) then) =
       __$EpisodeCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String name, String airDate, String episode});
+  $Res call({String id, String name, String airDate, String episode});
 }
 
 class __$EpisodeCopyWithImpl<$Res> extends _$EpisodeCopyWithImpl<$Res>
@@ -90,7 +90,7 @@ class __$EpisodeCopyWithImpl<$Res> extends _$EpisodeCopyWithImpl<$Res>
     Object episode = freezed,
   }) {
     return _then(_Episode(
-      id: id == freezed ? _value.id : id as int,
+      id: id == freezed ? _value.id : id as String,
       name: name == freezed ? _value.name : name as String,
       airDate: airDate == freezed ? _value.airDate : airDate as String,
       episode: episode == freezed ? _value.episode : episode as String,
@@ -110,7 +110,7 @@ class _$_Episode implements _Episode {
         assert(episode != null);
 
   @override
-  final int id;
+  final String id;
   @override
   final String name;
   @override
@@ -153,13 +153,13 @@ class _$_Episode implements _Episode {
 
 abstract class _Episode implements Episode {
   const factory _Episode(
-      {@required int id,
+      {@required String id,
       @required String name,
       @required String airDate,
       @required String episode}) = _$_Episode;
 
   @override
-  int get id;
+  String get id;
   @override
   String get name;
   @override

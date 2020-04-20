@@ -17,11 +17,11 @@ class _$CharacterModelTearOff {
 
   _CharacterModel call(
       {@required
-          int id,
+          String id,
       @required
           String name,
       @required
-      @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString)
+      @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString, name: 'status')
           VitalStatus vitalStatus,
       @required
       @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)
@@ -48,9 +48,12 @@ class _$CharacterModelTearOff {
 const $CharacterModel = _$CharacterModelTearOff();
 
 mixin _$CharacterModel {
-  int get id;
+  String get id;
   String get name;
-  @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString)
+  @JsonKey(
+      fromJson: Mapper.statusInType,
+      toJson: Mapper.statusInString,
+      name: 'status')
   VitalStatus get vitalStatus;
   @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)
   Gender get gender;
@@ -67,9 +70,9 @@ abstract class $CharacterModelCopyWith<$Res> {
           CharacterModel value, $Res Function(CharacterModel) then) =
       _$CharacterModelCopyWithImpl<$Res>;
   $Res call(
-      {int id,
+      {String id,
       String name,
-      @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString)
+      @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString, name: 'status')
           VitalStatus vitalStatus,
       @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)
           Gender gender,
@@ -100,7 +103,7 @@ class _$CharacterModelCopyWithImpl<$Res>
     Object image = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
+      id: id == freezed ? _value.id : id as String,
       name: name == freezed ? _value.name : name as String,
       vitalStatus: vitalStatus == freezed
           ? _value.vitalStatus
@@ -140,9 +143,9 @@ abstract class _$CharacterModelCopyWith<$Res>
       __$CharacterModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int id,
+      {String id,
       String name,
-      @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString)
+      @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString, name: 'status')
           VitalStatus vitalStatus,
       @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)
           Gender gender,
@@ -177,7 +180,7 @@ class __$CharacterModelCopyWithImpl<$Res>
     Object image = freezed,
   }) {
     return _then(_CharacterModel(
-      id: id == freezed ? _value.id : id as int,
+      id: id == freezed ? _value.id : id as String,
       name: name == freezed ? _value.name : name as String,
       vitalStatus: vitalStatus == freezed
           ? _value.vitalStatus
@@ -198,7 +201,7 @@ class _$_CharacterModel implements _CharacterModel {
       @required
           this.name,
       @required
-      @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString)
+      @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString, name: 'status')
           this.vitalStatus,
       @required
       @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)
@@ -221,11 +224,14 @@ class _$_CharacterModel implements _CharacterModel {
       _$_$_CharacterModelFromJson(json);
 
   @override
-  final int id;
+  final String id;
   @override
   final String name;
   @override
-  @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString)
+  @JsonKey(
+      fromJson: Mapper.statusInType,
+      toJson: Mapper.statusInString,
+      name: 'status')
   final VitalStatus vitalStatus;
   @override
   @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)
@@ -288,11 +294,11 @@ class _$_CharacterModel implements _CharacterModel {
 abstract class _CharacterModel implements CharacterModel {
   const factory _CharacterModel(
       {@required
-          int id,
+          String id,
       @required
           String name,
       @required
-      @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString)
+      @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString, name: 'status')
           VitalStatus vitalStatus,
       @required
       @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)
@@ -308,11 +314,14 @@ abstract class _CharacterModel implements CharacterModel {
       _$_CharacterModel.fromJson;
 
   @override
-  int get id;
+  String get id;
   @override
   String get name;
   @override
-  @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString)
+  @JsonKey(
+      fromJson: Mapper.statusInType,
+      toJson: Mapper.statusInString,
+      name: 'status')
   VitalStatus get vitalStatus;
   @override
   @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)

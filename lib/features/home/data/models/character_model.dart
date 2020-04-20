@@ -11,9 +11,12 @@ part 'character_model.g.dart';
 @freezed
 abstract class CharacterModel with _$CharacterModel {
   const factory CharacterModel({
-    @required int id,
+    @required String id,
     @required String name,
-    @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString)
+    @JsonKey(
+        fromJson: Mapper.statusInType,
+        toJson: Mapper.statusInString,
+        name: 'status')
     @required
         VitalStatus vitalStatus,
     @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)

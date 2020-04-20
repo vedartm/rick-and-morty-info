@@ -13,7 +13,7 @@ class _$CharacterTearOff {
   const _$CharacterTearOff();
 
   _Character call(
-      {@required int id,
+      {@required String id,
       @required String name,
       @required VitalStatus vitalStatus,
       @required Gender gender,
@@ -36,7 +36,7 @@ class _$CharacterTearOff {
 const $Character = _$CharacterTearOff();
 
 mixin _$Character {
-  int get id;
+  String get id;
   String get name;
   VitalStatus get vitalStatus;
   Gender get gender;
@@ -51,7 +51,7 @@ abstract class $CharacterCopyWith<$Res> {
   factory $CharacterCopyWith(Character value, $Res Function(Character) then) =
       _$CharacterCopyWithImpl<$Res>;
   $Res call(
-      {int id,
+      {String id,
       String name,
       VitalStatus vitalStatus,
       Gender gender,
@@ -81,7 +81,7 @@ class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
     Object image = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
+      id: id == freezed ? _value.id : id as String,
       name: name == freezed ? _value.name : name as String,
       vitalStatus: vitalStatus == freezed
           ? _value.vitalStatus
@@ -120,7 +120,7 @@ abstract class _$CharacterCopyWith<$Res> implements $CharacterCopyWith<$Res> {
       __$CharacterCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int id,
+      {String id,
       String name,
       VitalStatus vitalStatus,
       Gender gender,
@@ -153,7 +153,7 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
     Object image = freezed,
   }) {
     return _then(_Character(
-      id: id == freezed ? _value.id : id as int,
+      id: id == freezed ? _value.id : id as String,
       name: name == freezed ? _value.name : name as String,
       vitalStatus: vitalStatus == freezed
           ? _value.vitalStatus
@@ -184,7 +184,7 @@ class _$_Character implements _Character {
         assert(image != null);
 
   @override
-  final int id;
+  final String id;
   @override
   final String name;
   @override
@@ -243,7 +243,7 @@ class _$_Character implements _Character {
 
 abstract class _Character implements Character {
   const factory _Character(
-      {@required int id,
+      {@required String id,
       @required String name,
       @required VitalStatus vitalStatus,
       @required Gender gender,
@@ -252,7 +252,7 @@ abstract class _Character implements Character {
       @required String image}) = _$_Character;
 
   @override
-  int get id;
+  String get id;
   @override
   String get name;
   @override

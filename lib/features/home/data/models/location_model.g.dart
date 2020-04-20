@@ -8,7 +8,7 @@ part of 'location_model.dart';
 
 _$_LocationModel _$_$_LocationModelFromJson(Map<String, dynamic> json) {
   return _$_LocationModel(
-    id: json['id'] as int,
+    id: json['id'] as String,
     name: json['name'] as String,
     type: json['type'] as String,
     dimension: json['dimension'] as String,

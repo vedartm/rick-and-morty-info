@@ -1,6 +1,7 @@
 part of 'home_bloc.dart';
 
-@immutable
-abstract class HomeState {}
-
-class HomeInitial extends HomeState {}
+@freezed
+abstract class HomeState with _$HomeState {
+  const factory HomeState.navigationScreenChanged(int selectedIndex) =
+      NavigationScreenChanged;
+}

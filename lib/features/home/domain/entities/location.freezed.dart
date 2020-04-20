@@ -13,7 +13,7 @@ class _$LocationTearOff {
   const _$LocationTearOff();
 
   _Location call(
-      {@required int id,
+      {@required String id,
       @required String name,
       @required String type,
       @required String dimension}) {
@@ -30,7 +30,7 @@ class _$LocationTearOff {
 const $Location = _$LocationTearOff();
 
 mixin _$Location {
-  int get id;
+  String get id;
   String get name;
   String get type;
   String get dimension;
@@ -41,7 +41,7 @@ mixin _$Location {
 abstract class $LocationCopyWith<$Res> {
   factory $LocationCopyWith(Location value, $Res Function(Location) then) =
       _$LocationCopyWithImpl<$Res>;
-  $Res call({int id, String name, String type, String dimension});
+  $Res call({String id, String name, String type, String dimension});
 }
 
 class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
@@ -59,7 +59,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
     Object dimension = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
+      id: id == freezed ? _value.id : id as String,
       name: name == freezed ? _value.name : name as String,
       type: type == freezed ? _value.type : type as String,
       dimension: dimension == freezed ? _value.dimension : dimension as String,
@@ -71,7 +71,7 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   factory _$LocationCopyWith(_Location value, $Res Function(_Location) then) =
       __$LocationCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String name, String type, String dimension});
+  $Res call({String id, String name, String type, String dimension});
 }
 
 class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
@@ -90,7 +90,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
     Object dimension = freezed,
   }) {
     return _then(_Location(
-      id: id == freezed ? _value.id : id as int,
+      id: id == freezed ? _value.id : id as String,
       name: name == freezed ? _value.name : name as String,
       type: type == freezed ? _value.type : type as String,
       dimension: dimension == freezed ? _value.dimension : dimension as String,
@@ -110,7 +110,7 @@ class _$_Location implements _Location {
         assert(dimension != null);
 
   @override
-  final int id;
+  final String id;
   @override
   final String name;
   @override
@@ -153,13 +153,13 @@ class _$_Location implements _Location {
 
 abstract class _Location implements Location {
   const factory _Location(
-      {@required int id,
+      {@required String id,
       @required String name,
       @required String type,
       @required String dimension}) = _$_Location;
 
   @override
-  int get id;
+  String get id;
   @override
   String get name;
   @override

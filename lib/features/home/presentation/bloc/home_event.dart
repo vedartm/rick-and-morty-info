@@ -1,4 +1,6 @@
 part of 'home_bloc.dart';
 
-@immutable
-abstract class HomeEvent {}
+@freezed
+abstract class HomeEvent with _$HomeEvent {
+  const factory HomeEvent.itemSelected(int currentScreenIndex) = ItemSelected;
+}

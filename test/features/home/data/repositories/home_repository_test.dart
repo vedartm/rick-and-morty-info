@@ -70,7 +70,7 @@ void main() {
     // ];
     final tCharacterModels = [
       CharacterModel(
-        id: 1,
+        id: '1',
         name: 'Rick Sanchez',
         vitalStatus: const VitalStatus.alive(),
         gender: const Gender.male(),
@@ -110,7 +110,7 @@ void main() {
         await repository.getCharacters(tPage);
         // assert
         verify(mockRemoteDataSource.getCharacters(tPage));
-        verify(mockLocalDataSource.cacheCharacters(tCharacterModels));
+        verify(mockLocalDataSource.cacheCharacters(tCharacterModels, tPage));
       });
 
       test('should return failure when there is an exception', () async {
@@ -129,7 +129,7 @@ void main() {
     runTestsOffline(() {
       test('should return cached data when cache is hit', () async {
         // arrange
-        when(mockLocalDataSource.getLastCharacters())
+        when(mockLocalDataSource.getLastCharacters(tPage))
             .thenReturn(tCharacterModels);
         // act
         final result = await repository.getCharacters(tPage);
@@ -139,7 +139,7 @@ void main() {
 
       test('should return cache failure when cache is miss', () async {
         // arrange
-        when(mockLocalDataSource.getLastCharacters())
+        when(mockLocalDataSource.getLastCharacters(tPage))
             .thenThrow(CacheException());
         // act
         final result = await repository.getCharacters(tPage);

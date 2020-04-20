@@ -8,7 +8,7 @@ part 'character.freezed.dart';
 @freezed
 abstract class Character with _$Character {
   const factory Character({
-    @required int id,
+    @required String id,
     @required String name,
     @required VitalStatus vitalStatus,
     @required Gender gender,

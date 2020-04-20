@@ -16,9 +16,9 @@ class _$EpisodeModelTearOff {
   const _$EpisodeModelTearOff();
 
   _EpisodeModel call(
-      {@required int id,
+      {@required String id,
       @required String name,
-      @required String airDate,
+      @required @JsonKey(name: 'air_date') String airDate,
       @required String episode}) {
     return _EpisodeModel(
       id: id,
@@ -33,8 +33,9 @@ class _$EpisodeModelTearOff {
 const $EpisodeModel = _$EpisodeModelTearOff();
 
 mixin _$EpisodeModel {
-  int get id;
+  String get id;
   String get name;
+  @JsonKey(name: 'air_date')
   String get airDate;
   String get episode;
 
@@ -46,7 +47,11 @@ abstract class $EpisodeModelCopyWith<$Res> {
   factory $EpisodeModelCopyWith(
           EpisodeModel value, $Res Function(EpisodeModel) then) =
       _$EpisodeModelCopyWithImpl<$Res>;
-  $Res call({int id, String name, String airDate, String episode});
+  $Res call(
+      {String id,
+      String name,
+      @JsonKey(name: 'air_date') String airDate,
+      String episode});
 }
 
 class _$EpisodeModelCopyWithImpl<$Res> implements $EpisodeModelCopyWith<$Res> {
@@ -64,7 +69,7 @@ class _$EpisodeModelCopyWithImpl<$Res> implements $EpisodeModelCopyWith<$Res> {
     Object episode = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
+      id: id == freezed ? _value.id : id as String,
       name: name == freezed ? _value.name : name as String,
       airDate: airDate == freezed ? _value.airDate : airDate as String,
       episode: episode == freezed ? _value.episode : episode as String,
@@ -78,7 +83,11 @@ abstract class _$EpisodeModelCopyWith<$Res>
           _EpisodeModel value, $Res Function(_EpisodeModel) then) =
       __$EpisodeModelCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String name, String airDate, String episode});
+  $Res call(
+      {String id,
+      String name,
+      @JsonKey(name: 'air_date') String airDate,
+      String episode});
 }
 
 class __$EpisodeModelCopyWithImpl<$Res> extends _$EpisodeModelCopyWithImpl<$Res>
@@ -98,7 +107,7 @@ class __$EpisodeModelCopyWithImpl<$Res> extends _$EpisodeModelCopyWithImpl<$Res>
     Object episode = freezed,
   }) {
     return _then(_EpisodeModel(
-      id: id == freezed ? _value.id : id as int,
+      id: id == freezed ? _value.id : id as String,
       name: name == freezed ? _value.name : name as String,
       airDate: airDate == freezed ? _value.airDate : airDate as String,
       episode: episode == freezed ? _value.episode : episode as String,
@@ -111,7 +120,7 @@ class _$_EpisodeModel implements _EpisodeModel {
   const _$_EpisodeModel(
       {@required this.id,
       @required this.name,
-      @required this.airDate,
+      @required @JsonKey(name: 'air_date') this.airDate,
       @required this.episode})
       : assert(id != null),
         assert(name != null),
@@ -122,10 +131,11 @@ class _$_EpisodeModel implements _EpisodeModel {
       _$_$_EpisodeModelFromJson(json);
 
   @override
-  final int id;
+  final String id;
   @override
   final String name;
   @override
+  @JsonKey(name: 'air_date')
   final String airDate;
   @override
   final String episode;
@@ -170,19 +180,20 @@ class _$_EpisodeModel implements _EpisodeModel {
 
 abstract class _EpisodeModel implements EpisodeModel {
   const factory _EpisodeModel(
-      {@required int id,
+      {@required String id,
       @required String name,
-      @required String airDate,
+      @required @JsonKey(name: 'air_date') String airDate,
       @required String episode}) = _$_EpisodeModel;
 
   factory _EpisodeModel.fromJson(Map<String, dynamic> json) =
       _$_EpisodeModel.fromJson;
 
   @override
-  int get id;
+  String get id;
   @override
   String get name;
   @override
+  @JsonKey(name: 'air_date')
   String get airDate;
   @override
   String get episode;

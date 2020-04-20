@@ -16,7 +16,7 @@ class _$LocationModelTearOff {
   const _$LocationModelTearOff();
 
   _LocationModel call(
-      {@required int id,
+      {@required String id,
       @required String name,
       @required String type,
       @required String dimension}) {
@@ -33,7 +33,7 @@ class _$LocationModelTearOff {
 const $LocationModel = _$LocationModelTearOff();
 
 mixin _$LocationModel {
-  int get id;
+  String get id;
   String get name;
   String get type;
   String get dimension;
@@ -46,7 +46,7 @@ abstract class $LocationModelCopyWith<$Res> {
   factory $LocationModelCopyWith(
           LocationModel value, $Res Function(LocationModel) then) =
       _$LocationModelCopyWithImpl<$Res>;
-  $Res call({int id, String name, String type, String dimension});
+  $Res call({String id, String name, String type, String dimension});
 }
 
 class _$LocationModelCopyWithImpl<$Res>
@@ -65,7 +65,7 @@ class _$LocationModelCopyWithImpl<$Res>
     Object dimension = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
+      id: id == freezed ? _value.id : id as String,
       name: name == freezed ? _value.name : name as String,
       type: type == freezed ? _value.type : type as String,
       dimension: dimension == freezed ? _value.dimension : dimension as String,
@@ -79,7 +79,7 @@ abstract class _$LocationModelCopyWith<$Res>
           _LocationModel value, $Res Function(_LocationModel) then) =
       __$LocationModelCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String name, String type, String dimension});
+  $Res call({String id, String name, String type, String dimension});
 }
 
 class __$LocationModelCopyWithImpl<$Res>
@@ -100,7 +100,7 @@ class __$LocationModelCopyWithImpl<$Res>
     Object dimension = freezed,
   }) {
     return _then(_LocationModel(
-      id: id == freezed ? _value.id : id as int,
+      id: id == freezed ? _value.id : id as String,
       name: name == freezed ? _value.name : name as String,
       type: type == freezed ? _value.type : type as String,
       dimension: dimension == freezed ? _value.dimension : dimension as String,
@@ -124,7 +124,7 @@ class _$_LocationModel implements _LocationModel {
       _$_$_LocationModelFromJson(json);
 
   @override
-  final int id;
+  final String id;
   @override
   final String name;
   @override
@@ -172,7 +172,7 @@ class _$_LocationModel implements _LocationModel {
 
 abstract class _LocationModel implements LocationModel {
   const factory _LocationModel(
-      {@required int id,
+      {@required String id,
       @required String name,
       @required String type,
       @required String dimension}) = _$_LocationModel;
@@ -181,7 +181,7 @@ abstract class _LocationModel implements LocationModel {
       _$_LocationModel.fromJson;
 
   @override
-  int get id;
+  String get id;
   @override
   String get name;
   @override
