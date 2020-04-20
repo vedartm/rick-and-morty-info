@@ -12,12 +12,12 @@ class GetCharactersUseCase extends UseCase<List<Character>, CharacterParams> {
 
   @override
   Future<Either<Failure, List<Character>>> call(CharacterParams params) {
-    return repository.getCharacters();
+    return repository.getCharacters(params.page);
   }
 }
 
 class CharacterParams {
-  CharacterParams(this.offset);
+  CharacterParams(this.page);
 
-  final int offset;
+  final int page;
 }

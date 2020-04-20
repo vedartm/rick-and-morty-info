@@ -17,7 +17,7 @@ void main() {
     mockRepository = MockHomeRepository();
     usecase = GetCharactersUseCase(mockRepository);
   });
-
+  final tPage = 1;
   final tCharacters = [
     Character(
       id: 1,
@@ -32,10 +32,10 @@ void main() {
 
   test('should return list of characters when requested with offset', () async {
     // arrange
-    when(mockRepository.getCharacters())
+    when(mockRepository.getCharacters(tPage))
         .thenAnswer((_) async => await Right(tCharacters));
     // act
-    final result = await usecase(CharacterParams(1));
+    final result = await usecase(CharacterParams(tPage));
     // assert
     expect(result, equals(Right(tCharacters)));
   });

@@ -16,6 +16,7 @@ void main() {
     usecase = GetLocationsUseCase(mockRepository);
   });
 
+  final tPage = 1;
   final tLocations = [
     Location(
       id: 1,
@@ -27,10 +28,10 @@ void main() {
 
   test('should return list of locations when requested with offset', () async {
     // arrange
-    when(mockRepository.getLocations())
+    when(mockRepository.getLocations(tPage))
         .thenAnswer((_) async => await Right(tLocations));
     // act
-    final result = await usecase(LocationParams(1));
+    final result = await usecase(LocationParams(tPage));
     // assert
     expect(result, equals(Right(tLocations)));
   });

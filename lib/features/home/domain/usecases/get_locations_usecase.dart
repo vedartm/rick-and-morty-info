@@ -12,12 +12,12 @@ class GetLocationsUseCase extends UseCase<List<Location>, LocationParams> {
 
   @override
   Future<Either<Failure, List<Location>>> call(LocationParams params) {
-    return repository.getLocations();
+    return repository.getLocations(params.page);
   }
 }
 
 class LocationParams {
-  LocationParams(this.offset);
+  LocationParams(this.page);
 
-  final int offset;
+  final int page;
 }

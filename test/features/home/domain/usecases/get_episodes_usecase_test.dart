@@ -16,6 +16,7 @@ void main() {
     usecase = GetEpisodesUseCase(mockRepository);
   });
 
+  final tPage = 1;
   final tEpisodes = [
     Episode(
       id: 1,
@@ -27,10 +28,10 @@ void main() {
 
   test('should return list of episodes when requested with offset', () async {
     // arrange
-    when(mockRepository.getEpisodes())
+    when(mockRepository.getEpisodes(tPage))
         .thenAnswer((_) async => await Right(tEpisodes));
     // act
-    final result = await usecase(EpisodeParams(1));
+    final result = await usecase(EpisodeParams(tPage));
     // assert
     expect(result, equals(Right(tEpisodes)));
   });

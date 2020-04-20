@@ -12,12 +12,12 @@ class GetEpisodesUseCase extends UseCase<List<Episode>, EpisodeParams> {
 
   @override
   Future<Either<Failure, List<Episode>>> call(EpisodeParams params) {
-    return repository.getEpisodes();
+    return repository.getEpisodes(params.page);
   }
 }
 
 class EpisodeParams {
-  EpisodeParams(this.offset);
+  EpisodeParams(this.page);
 
-  final int offset;
+  final int page;
 }

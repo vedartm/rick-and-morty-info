@@ -1,5 +1,4 @@
-import 'package:rick_and_morty_info/core/types/gender.dart';
-
+import '../types/gender.dart';
 import '../types/vital_status.dart';
 
 class Mapper {
