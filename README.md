@@ -11,11 +11,11 @@ A simple app to demonstrate Clean Architecture with GraphQL and flutter_bloc
 
 ## Motivation
 
-From [Martin Fouler](https://en.wikiquote.org/wiki/Martin_Fowler)'s words,
+In [Martin Fouler](https://martinfowler.com/)'s words,
 
 “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”
 
-With this idea in mind, I wanted to demostrate how can one convert a simple app to production level and I hope I made my case.
+With this idea in mind, I wanted to demonstrate how we can make a simple app in production grade (and I hope I made my case).
 
 ## "Production level" implementations
 
