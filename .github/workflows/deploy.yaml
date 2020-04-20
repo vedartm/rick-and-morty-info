@@ -5,24 +5,23 @@ on:
     branches: [master]
 
 jobs:
-  deploy:
-    runs-on: macos-latest
-    needs: [drive_ios, drive_android, test]
-    name: Build  apk  and web
+  build:
+    name: Build APK
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - uses: actions/setup-java@v1
+        with:
+          java-version: "12.x"
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: "1.15.17"
           channel: "beta"
       - run: flutter pub get
-      - run: flutter analyze
-      - uses: actions/setup-java@v1
-        with:
-          java-version: "12.x"
+      - run: flutter test
       - run: flutter build apk --debug --split-per-abi
-      - name: Create a Release APK
+      - name: Push APK to Releases
         uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/apk/debug/*.apk"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GHUB_TOKEN }}
