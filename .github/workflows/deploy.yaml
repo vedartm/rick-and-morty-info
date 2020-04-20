@@ -8,7 +8,6 @@ on:
 
 jobs:
   deploy:
-    if: github.event_name != 'pull_request'
     runs-on: macos-latest
     needs: [drive_ios, drive_android, test]
     name: Build  apk  and web
@@ -18,6 +17,9 @@ jobs:
         with:
           flutter-version: "1.15.17"
           channel: "beta"
+      - run: flutter pub get
+      - run: flutter analyze
+        if: github.event_name != 'pull_request'
       - uses: actions/setup-java@v1
         with:
           java-version: "12.x"
