@@ -36,6 +36,23 @@ With this idea in mind, I wanted to demonstrate how we can make a simple app in 
   <img src="https://raw.githubusercontent.com/excogitatr/rick-and-morty-info/develop/assets/screen_3.png" alt="Screen 3" width="250">
 </p>
 
+## Installation
+
+- Check if you are in the beta channel of flutter SDK and the version v1.15.17 or higher (I appologize for using beta version). [Instruction to change flutter channel](https://github.com/flutter/flutter/wiki/Flutter-build-release-channels#how-to-change-channels).
+- Clone the repo
+  ```sh
+  git clone https://github.com/excogitatr/rick-and-morty-info.git
+  ```
+- And then we can use the normal build and run procedure
+  ```sh
+  flutter pub get
+  flutter run
+  ```
+- Some files like `*.freezed.dart`, `*.g.dart`, `*.iconfig.dart` are auto generated. If there is any issue from these files just run this command to regenerate them.
+  ```sh
+  flutter pub run build_runner watch --delete-conflicting-outputs
+  ```
+
 ## Thanks to
 
 - [unclebob](https://github.com/unclebob) (For the infamous Clean Architecture)
