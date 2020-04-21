@@ -11,7 +11,7 @@ A simple app to demonstrate Clean Architecture with GraphQL and flutter_bloc
 
 ## Motivation
 
-In [Martin Fowler's](https://martinfowler.com/)'s words,
+In [Martin Fowler](https://martinfowler.com/)'s words,
 
 “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” (*[Refactoring: Improving the Design of Existing Code](https://www.csie.ntu.edu.tw/~r95004/Refactoring_improving_the_design_of_existing_code.pdf)*, 1999, p. 22)
 
