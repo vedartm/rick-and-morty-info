@@ -9,6 +9,12 @@
 
 A simple app to demonstrate Clean Architecture with GraphQL and flutter_bloc
 
+## Sponsored
+
+rick-and-morty-info is being sponsored by the following tool; please help to support us by taking a look and signing up to a free trial.
+
+<a href="https://tracking.gitads.io/?repo=rick-and-morty-info"> <img src="https://images.gitads.io/rick-and-morty-info" alt="GitAds"/> </a>
+
 ## Motivation
 
 In [Martin Fowler](https://martinfowler.com/)'s words,
