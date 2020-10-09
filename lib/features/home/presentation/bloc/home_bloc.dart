@@ -36,7 +36,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   }
 
   Future<List<Character>> getCharactersInPage(int offset) async {
-    final page = _getPageFromOffset(offset) + 1;
+    final page = _getPageFromOffset(offset);
     final either = await _getCharacter(CharacterParams(page));
     return either.fold(
       (l) => throw _getFailureAndThrowExpection(l),
@@ -45,7 +45,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   }
 
   Future<List<Episode>> getEpisodesInPage(int offset) async {
-    final page = _getPageFromOffset(offset) + 1;
+    final page = _getPageFromOffset(offset);
     final either = await _getEpisodes(EpisodeParams(page));
     return either.fold(
       (l) => throw _getFailureAndThrowExpection(l),
@@ -54,7 +54,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   }
 
   Future<List<Location>> getLocationsInPage(int offset) async {
-    final page = _getPageFromOffset(offset) + 1;
+    final page = _getPageFromOffset(offset);
     final either = await _getLocations(LocationParams(page));
     return either.fold(
       (l) => throw _getFailureAndThrowExpection(l),
@@ -62,7 +62,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     );
   }
 
-  int _getPageFromOffset(int offset) => offset ~/ 20;
+  int _getPageFromOffset(int offset) => offset ~/ 20 + 1;
 
   Exception _getFailureAndThrowExpection(Failure l) {
     if (l is ServerFailure) {
