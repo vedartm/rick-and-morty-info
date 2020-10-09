@@ -16,7 +16,7 @@ class MockHomeRemoteDataSource extends Mock implements IHomeRemoteDataSource {}
 
 class MockHomeLocalDataSource extends Mock implements IHomeLocalDataSource {}
 
-class MockNetworkInfo extends Mock implements INetworkInfo {}
+class MockNetworkInfo extends Mock implements NetworkInfo {}
 
 void main() {
   MockHomeLocalDataSource mockLocalDataSource;
