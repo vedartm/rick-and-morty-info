@@ -21,7 +21,7 @@ class HomeRepository implements IHomeRepository {
       this._networkInfo, this._remoteDataSource, this._localDataSource);
 
   final IHomeLocalDataSource _localDataSource;
-  final INetworkInfo _networkInfo;
+  final NetworkInfo _networkInfo;
   final IHomeRemoteDataSource _remoteDataSource;
 
   @override
