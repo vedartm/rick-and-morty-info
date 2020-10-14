@@ -14,8 +14,7 @@ import '../models/character_model.dart';
 import '../models/episode_model.dart';
 import '../models/location_model.dart';
 
-@lazySingleton
-@RegisterAs(IHomeRepository)
+@LazySingleton(as: IHomeRepository)
 class HomeRepository implements IHomeRepository {
   HomeRepository(
       this._networkInfo, this._remoteDataSource, this._localDataSource);

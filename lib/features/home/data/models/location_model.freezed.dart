@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'location_model.dart';
 
@@ -12,9 +12,11 @@ LocationModel _$LocationModelFromJson(Map<String, dynamic> json) {
   return _LocationModel.fromJson(json);
 }
 
+/// @nodoc
 class _$LocationModelTearOff {
   const _$LocationModelTearOff();
 
+// ignore: unused_element
   _LocationModel call(
       {@required String id,
       @required String name,
@@ -27,11 +29,18 @@ class _$LocationModelTearOff {
       dimension: dimension,
     );
   }
+
+// ignore: unused_element
+  LocationModel fromJson(Map<String, Object> json) {
+    return LocationModel.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $LocationModel = _$LocationModelTearOff();
 
+/// @nodoc
 mixin _$LocationModel {
   String get id;
   String get name;
@@ -42,6 +51,7 @@ mixin _$LocationModel {
   $LocationModelCopyWith<LocationModel> get copyWith;
 }
 
+/// @nodoc
 abstract class $LocationModelCopyWith<$Res> {
   factory $LocationModelCopyWith(
           LocationModel value, $Res Function(LocationModel) then) =
@@ -49,6 +59,7 @@ abstract class $LocationModelCopyWith<$Res> {
   $Res call({String id, String name, String type, String dimension});
 }
 
+/// @nodoc
 class _$LocationModelCopyWithImpl<$Res>
     implements $LocationModelCopyWith<$Res> {
   _$LocationModelCopyWithImpl(this._value, this._then);
@@ -73,6 +84,7 @@ class _$LocationModelCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$LocationModelCopyWith<$Res>
     implements $LocationModelCopyWith<$Res> {
   factory _$LocationModelCopyWith(
@@ -82,6 +94,7 @@ abstract class _$LocationModelCopyWith<$Res>
   $Res call({String id, String name, String type, String dimension});
 }
 
+/// @nodoc
 class __$LocationModelCopyWithImpl<$Res>
     extends _$LocationModelCopyWithImpl<$Res>
     implements _$LocationModelCopyWith<$Res> {
@@ -109,6 +122,8 @@ class __$LocationModelCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_LocationModel implements _LocationModel {
   const _$_LocationModel(
       {@required this.id,

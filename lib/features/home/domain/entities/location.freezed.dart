@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'location.dart';
 
@@ -9,9 +9,11 @@ part of 'location.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$LocationTearOff {
   const _$LocationTearOff();
 
+// ignore: unused_element
   _Location call(
       {@required String id,
       @required String name,
@@ -26,9 +28,11 @@ class _$LocationTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Location = _$LocationTearOff();
 
+/// @nodoc
 mixin _$Location {
   String get id;
   String get name;
@@ -38,12 +42,14 @@ mixin _$Location {
   $LocationCopyWith<Location> get copyWith;
 }
 
+/// @nodoc
 abstract class $LocationCopyWith<$Res> {
   factory $LocationCopyWith(Location value, $Res Function(Location) then) =
       _$LocationCopyWithImpl<$Res>;
   $Res call({String id, String name, String type, String dimension});
 }
 
+/// @nodoc
 class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
   _$LocationCopyWithImpl(this._value, this._then);
 
@@ -67,6 +73,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   factory _$LocationCopyWith(_Location value, $Res Function(_Location) then) =
       __$LocationCopyWithImpl<$Res>;
@@ -74,6 +81,7 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   $Res call({String id, String name, String type, String dimension});
 }
 
+/// @nodoc
 class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
     implements _$LocationCopyWith<$Res> {
   __$LocationCopyWithImpl(_Location _value, $Res Function(_Location) _then)
@@ -98,6 +106,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Location implements _Location {
   const _$_Location(
       {@required this.id,

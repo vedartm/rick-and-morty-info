@@ -4,7 +4,7 @@ description: A new Flutter project.
 version: 1.1.0
 
 environment:
-  sdk: ">=2.6.0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -13,46 +13,46 @@ dependencies:
   # UI
   pagination_view: ^0.7.0
   ant_icons: ^1.0.0
-  cached_network_image: ^2.1.0+1
+  cached_network_image: ^2.3.2+1
 
   # Network
-  graphql_flutter: ^3.0.0
+  graphql_flutter: ^3.1.0
   data_connection_checker: ^0.3.4
 
   # Dart data class
-  json_serializable: ^3.3.0
-  freezed_annotation: ^0.7.1
+  json_serializable: ^3.5.0
+  freezed_annotation: ^0.12.0
 
   # Dependency Injection
-  get_it: ^4.0.1
-  injectable: ^0.3.0
+  get_it: ^4.0.4
+  injectable: ^1.0.4
 
   # State management
-  bloc: ^3.0.0
-  flutter_bloc: ^3.2.0
+  bloc: ^6.0.3
+  flutter_bloc: ^6.0.6
 
   # Caching
-  hive: ^1.4.1+1
+  hive: ^1.4.4+1
 
   # Misc
-  dartz: ^0.8.9
-  rxdart: ^0.23.1
-  path_provider: ^1.6.5
+  dartz: ^0.9.2
+  rxdart: ^0.24.1
+  path_provider: ^1.6.18
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   # Code generators
-  freezed: ^0.10.6
-  injectable_generator: ^0.3.4
-  build_runner: ^1.8.1
+  freezed: ^0.12.1
+  injectable_generator: ^1.0.4
+  build_runner: ^1.10.1
 
   # Linting
-  effective_dart: ^1.2.1
+  effective_dart: ^1.2.4
 
   # Testing
-  bloc_test: ^4.0.0
+  bloc_test: ^7.0.4
   mockito: ^4.1.1
 
 flutter:

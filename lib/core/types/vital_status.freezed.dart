@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'vital_status.dart';
 
@@ -9,25 +9,31 @@ part of 'vital_status.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$VitalStatusTearOff {
   const _$VitalStatusTearOff();
 
+// ignore: unused_element
   Alive alive() {
     return const Alive();
   }
 
+// ignore: unused_element
   Dead dead() {
     return const Dead();
   }
 
+// ignore: unused_element
   Unknown unknown() {
     return const Unknown();
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $VitalStatus = _$VitalStatusTearOff();
 
+/// @nodoc
 mixin _$VitalStatus {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -57,12 +63,14 @@ mixin _$VitalStatus {
   });
 }
 
+/// @nodoc
 abstract class $VitalStatusCopyWith<$Res> {
   factory $VitalStatusCopyWith(
           VitalStatus value, $Res Function(VitalStatus) then) =
       _$VitalStatusCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$VitalStatusCopyWithImpl<$Res> implements $VitalStatusCopyWith<$Res> {
   _$VitalStatusCopyWithImpl(this._value, this._then);
 
@@ -71,11 +79,13 @@ class _$VitalStatusCopyWithImpl<$Res> implements $VitalStatusCopyWith<$Res> {
   final $Res Function(VitalStatus) _then;
 }
 
+/// @nodoc
 abstract class $AliveCopyWith<$Res> {
   factory $AliveCopyWith(Alive value, $Res Function(Alive) then) =
       _$AliveCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$AliveCopyWithImpl<$Res> extends _$VitalStatusCopyWithImpl<$Res>
     implements $AliveCopyWith<$Res> {
   _$AliveCopyWithImpl(Alive _value, $Res Function(Alive) _then)
@@ -85,6 +95,7 @@ class _$AliveCopyWithImpl<$Res> extends _$VitalStatusCopyWithImpl<$Res>
   Alive get _value => super._value as Alive;
 }
 
+/// @nodoc
 class _$Alive implements Alive {
   const _$Alive();
 
@@ -162,11 +173,13 @@ abstract class Alive implements VitalStatus {
   const factory Alive() = _$Alive;
 }
 
+/// @nodoc
 abstract class $DeadCopyWith<$Res> {
   factory $DeadCopyWith(Dead value, $Res Function(Dead) then) =
       _$DeadCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$DeadCopyWithImpl<$Res> extends _$VitalStatusCopyWithImpl<$Res>
     implements $DeadCopyWith<$Res> {
   _$DeadCopyWithImpl(Dead _value, $Res Function(Dead) _then)
@@ -176,6 +189,7 @@ class _$DeadCopyWithImpl<$Res> extends _$VitalStatusCopyWithImpl<$Res>
   Dead get _value => super._value as Dead;
 }
 
+/// @nodoc
 class _$Dead implements Dead {
   const _$Dead();
 
@@ -253,11 +267,13 @@ abstract class Dead implements VitalStatus {
   const factory Dead() = _$Dead;
 }
 
+/// @nodoc
 abstract class $UnknownCopyWith<$Res> {
   factory $UnknownCopyWith(Unknown value, $Res Function(Unknown) then) =
       _$UnknownCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$UnknownCopyWithImpl<$Res> extends _$VitalStatusCopyWithImpl<$Res>
     implements $UnknownCopyWith<$Res> {
   _$UnknownCopyWithImpl(Unknown _value, $Res Function(Unknown) _then)
@@ -267,6 +283,7 @@ class _$UnknownCopyWithImpl<$Res> extends _$VitalStatusCopyWithImpl<$Res>
   Unknown get _value => super._value as Unknown;
 }
 
+/// @nodoc
 class _$Unknown implements Unknown {
   const _$Unknown();
 

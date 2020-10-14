@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'home_bloc.dart';
 
@@ -9,9 +9,11 @@ part of 'home_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$HomeEventTearOff {
   const _$HomeEventTearOff();
 
+// ignore: unused_element
   ItemSelected itemSelected(int currentScreenIndex) {
     return ItemSelected(
       currentScreenIndex,
@@ -19,21 +21,44 @@ class _$HomeEventTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $HomeEvent = _$HomeEventTearOff();
 
+/// @nodoc
 mixin _$HomeEvent {
   int get currentScreenIndex;
+
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result itemSelected(int currentScreenIndex),
+  });
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result itemSelected(int currentScreenIndex),
+    @required Result orElse(),
+  });
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result itemSelected(ItemSelected value),
+  });
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result itemSelected(ItemSelected value),
+    @required Result orElse(),
+  });
 
   $HomeEventCopyWith<HomeEvent> get copyWith;
 }
 
+/// @nodoc
 abstract class $HomeEventCopyWith<$Res> {
   factory $HomeEventCopyWith(HomeEvent value, $Res Function(HomeEvent) then) =
       _$HomeEventCopyWithImpl<$Res>;
   $Res call({int currentScreenIndex});
 }
 
+/// @nodoc
 class _$HomeEventCopyWithImpl<$Res> implements $HomeEventCopyWith<$Res> {
   _$HomeEventCopyWithImpl(this._value, this._then);
 
@@ -53,6 +78,7 @@ class _$HomeEventCopyWithImpl<$Res> implements $HomeEventCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class $ItemSelectedCopyWith<$Res> implements $HomeEventCopyWith<$Res> {
   factory $ItemSelectedCopyWith(
           ItemSelected value, $Res Function(ItemSelected) then) =
@@ -61,6 +87,7 @@ abstract class $ItemSelectedCopyWith<$Res> implements $HomeEventCopyWith<$Res> {
   $Res call({int currentScreenIndex});
 }
 
+/// @nodoc
 class _$ItemSelectedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
     implements $ItemSelectedCopyWith<$Res> {
   _$ItemSelectedCopyWithImpl(
@@ -82,6 +109,7 @@ class _$ItemSelectedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$ItemSelected implements ItemSelected {
   const _$ItemSelected(this.currentScreenIndex)
       : assert(currentScreenIndex != null);
@@ -111,6 +139,50 @@ class _$ItemSelected implements ItemSelected {
   @override
   $ItemSelectedCopyWith<ItemSelected> get copyWith =>
       _$ItemSelectedCopyWithImpl<ItemSelected>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result itemSelected(int currentScreenIndex),
+  }) {
+    assert(itemSelected != null);
+    return itemSelected(currentScreenIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result itemSelected(int currentScreenIndex),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (itemSelected != null) {
+      return itemSelected(currentScreenIndex);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result itemSelected(ItemSelected value),
+  }) {
+    assert(itemSelected != null);
+    return itemSelected(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result itemSelected(ItemSelected value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (itemSelected != null) {
+      return itemSelected(this);
+    }
+    return orElse();
+  }
 }
 
 abstract class ItemSelected implements HomeEvent {
@@ -122,9 +194,11 @@ abstract class ItemSelected implements HomeEvent {
   $ItemSelectedCopyWith<ItemSelected> get copyWith;
 }
 
+/// @nodoc
 class _$HomeStateTearOff {
   const _$HomeStateTearOff();
 
+// ignore: unused_element
   NavigationScreenChanged navigationScreenChanged(int selectedIndex) {
     return NavigationScreenChanged(
       selectedIndex,
@@ -132,21 +206,44 @@ class _$HomeStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $HomeState = _$HomeStateTearOff();
 
+/// @nodoc
 mixin _$HomeState {
   int get selectedIndex;
+
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result navigationScreenChanged(int selectedIndex),
+  });
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result navigationScreenChanged(int selectedIndex),
+    @required Result orElse(),
+  });
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result navigationScreenChanged(NavigationScreenChanged value),
+  });
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result navigationScreenChanged(NavigationScreenChanged value),
+    @required Result orElse(),
+  });
 
   $HomeStateCopyWith<HomeState> get copyWith;
 }
 
+/// @nodoc
 abstract class $HomeStateCopyWith<$Res> {
   factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
       _$HomeStateCopyWithImpl<$Res>;
   $Res call({int selectedIndex});
 }
 
+/// @nodoc
 class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
   _$HomeStateCopyWithImpl(this._value, this._then);
 
@@ -166,6 +263,7 @@ class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class $NavigationScreenChangedCopyWith<$Res>
     implements $HomeStateCopyWith<$Res> {
   factory $NavigationScreenChangedCopyWith(NavigationScreenChanged value,
@@ -175,6 +273,7 @@ abstract class $NavigationScreenChangedCopyWith<$Res>
   $Res call({int selectedIndex});
 }
 
+/// @nodoc
 class _$NavigationScreenChangedCopyWithImpl<$Res>
     extends _$HomeStateCopyWithImpl<$Res>
     implements $NavigationScreenChangedCopyWith<$Res> {
@@ -195,6 +294,7 @@ class _$NavigationScreenChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$NavigationScreenChanged implements NavigationScreenChanged {
   const _$NavigationScreenChanged(this.selectedIndex)
       : assert(selectedIndex != null);
@@ -224,6 +324,50 @@ class _$NavigationScreenChanged implements NavigationScreenChanged {
   $NavigationScreenChangedCopyWith<NavigationScreenChanged> get copyWith =>
       _$NavigationScreenChangedCopyWithImpl<NavigationScreenChanged>(
           this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result navigationScreenChanged(int selectedIndex),
+  }) {
+    assert(navigationScreenChanged != null);
+    return navigationScreenChanged(selectedIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result navigationScreenChanged(int selectedIndex),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (navigationScreenChanged != null) {
+      return navigationScreenChanged(selectedIndex);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result navigationScreenChanged(NavigationScreenChanged value),
+  }) {
+    assert(navigationScreenChanged != null);
+    return navigationScreenChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result navigationScreenChanged(NavigationScreenChanged value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (navigationScreenChanged != null) {
+      return navigationScreenChanged(this);
+    }
+    return orElse();
+  }
 }
 
 abstract class NavigationScreenChanged implements HomeState {

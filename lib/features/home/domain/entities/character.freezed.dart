@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'character.dart';
 
@@ -9,9 +9,11 @@ part of 'character.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$CharacterTearOff {
   const _$CharacterTearOff();
 
+// ignore: unused_element
   _Character call(
       {@required String id,
       @required String name,
@@ -32,9 +34,11 @@ class _$CharacterTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Character = _$CharacterTearOff();
 
+/// @nodoc
 mixin _$Character {
   String get id;
   String get name;
@@ -47,6 +51,7 @@ mixin _$Character {
   $CharacterCopyWith<Character> get copyWith;
 }
 
+/// @nodoc
 abstract class $CharacterCopyWith<$Res> {
   factory $CharacterCopyWith(Character value, $Res Function(Character) then) =
       _$CharacterCopyWithImpl<$Res>;
@@ -63,6 +68,7 @@ abstract class $CharacterCopyWith<$Res> {
   $GenderCopyWith<$Res> get gender;
 }
 
+/// @nodoc
 class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
   _$CharacterCopyWithImpl(this._value, this._then);
 
@@ -114,6 +120,7 @@ class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$CharacterCopyWith<$Res> implements $CharacterCopyWith<$Res> {
   factory _$CharacterCopyWith(
           _Character value, $Res Function(_Character) then) =
@@ -134,6 +141,7 @@ abstract class _$CharacterCopyWith<$Res> implements $CharacterCopyWith<$Res> {
   $GenderCopyWith<$Res> get gender;
 }
 
+/// @nodoc
 class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
     implements _$CharacterCopyWith<$Res> {
   __$CharacterCopyWithImpl(_Character _value, $Res Function(_Character) _then)
@@ -166,6 +174,7 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Character implements _Character {
   const _$_Character(
       {@required this.id,

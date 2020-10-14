@@ -4,7 +4,7 @@ import 'package:hive/hive.dart';
 import 'package:injectable/injectable.dart';
 import 'package:path_provider/path_provider.dart';
 
-@registerModule
+@module
 abstract class RegisterModule {
   @lazySingleton
   DataConnectionChecker get connectionChecker => DataConnectionChecker();

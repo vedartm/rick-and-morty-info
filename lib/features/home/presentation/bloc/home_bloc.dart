@@ -19,14 +19,12 @@ part 'home_state.dart';
 
 @injectable
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
-  HomeBloc(this._getCharacter, this._getEpisodes, this._getLocations);
+  HomeBloc(this._getCharacter, this._getEpisodes, this._getLocations)
+      : super(HomeState.navigationScreenChanged(0));
 
   final GetCharactersUseCase _getCharacter;
   final GetEpisodesUseCase _getEpisodes;
   final GetLocationsUseCase _getLocations;
-
-  @override
-  HomeState get initialState => HomeState.navigationScreenChanged(0);
 
   @override
   Stream<HomeState> mapEventToState(

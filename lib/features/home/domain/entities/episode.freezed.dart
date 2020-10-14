@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'episode.dart';
 
@@ -9,9 +9,11 @@ part of 'episode.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$EpisodeTearOff {
   const _$EpisodeTearOff();
 
+// ignore: unused_element
   _Episode call(
       {@required String id,
       @required String name,
@@ -26,9 +28,11 @@ class _$EpisodeTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Episode = _$EpisodeTearOff();
 
+/// @nodoc
 mixin _$Episode {
   String get id;
   String get name;
@@ -38,12 +42,14 @@ mixin _$Episode {
   $EpisodeCopyWith<Episode> get copyWith;
 }
 
+/// @nodoc
 abstract class $EpisodeCopyWith<$Res> {
   factory $EpisodeCopyWith(Episode value, $Res Function(Episode) then) =
       _$EpisodeCopyWithImpl<$Res>;
   $Res call({String id, String name, String airDate, String episode});
 }
 
+/// @nodoc
 class _$EpisodeCopyWithImpl<$Res> implements $EpisodeCopyWith<$Res> {
   _$EpisodeCopyWithImpl(this._value, this._then);
 
@@ -67,6 +73,7 @@ class _$EpisodeCopyWithImpl<$Res> implements $EpisodeCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$EpisodeCopyWith<$Res> implements $EpisodeCopyWith<$Res> {
   factory _$EpisodeCopyWith(_Episode value, $Res Function(_Episode) then) =
       __$EpisodeCopyWithImpl<$Res>;
@@ -74,6 +81,7 @@ abstract class _$EpisodeCopyWith<$Res> implements $EpisodeCopyWith<$Res> {
   $Res call({String id, String name, String airDate, String episode});
 }
 
+/// @nodoc
 class __$EpisodeCopyWithImpl<$Res> extends _$EpisodeCopyWithImpl<$Res>
     implements _$EpisodeCopyWith<$Res> {
   __$EpisodeCopyWithImpl(_Episode _value, $Res Function(_Episode) _then)
@@ -98,6 +106,7 @@ class __$EpisodeCopyWithImpl<$Res> extends _$EpisodeCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Episode implements _Episode {
   const _$_Episode(
       {@required this.id,

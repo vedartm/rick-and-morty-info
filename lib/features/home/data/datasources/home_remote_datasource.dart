@@ -15,8 +15,7 @@ abstract class IHomeRemoteDataSource {
   Future<List<EpisodeModel>> getEpisodes(int page);
 }
 
-@lazySingleton
-@RegisterAs(IHomeRemoteDataSource)
+@LazySingleton(as: IHomeRemoteDataSource)
 class HomeRemoteDataSource implements IHomeRemoteDataSource {
   HomeRemoteDataSource(this._client);
 

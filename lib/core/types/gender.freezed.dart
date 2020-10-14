@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'gender.dart';
 
@@ -9,29 +9,36 @@ part of 'gender.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$GenderTearOff {
   const _$GenderTearOff();
 
+// ignore: unused_element
   Female female() {
     return const Female();
   }
 
+// ignore: unused_element
   Genderless genderless() {
     return const Genderless();
   }
 
+// ignore: unused_element
   Male male() {
     return const Male();
   }
 
+// ignore: unused_element
   Unknown unknown() {
     return const Unknown();
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Gender = _$GenderTearOff();
 
+/// @nodoc
 mixin _$Gender {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -65,11 +72,13 @@ mixin _$Gender {
   });
 }
 
+/// @nodoc
 abstract class $GenderCopyWith<$Res> {
   factory $GenderCopyWith(Gender value, $Res Function(Gender) then) =
       _$GenderCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$GenderCopyWithImpl<$Res> implements $GenderCopyWith<$Res> {
   _$GenderCopyWithImpl(this._value, this._then);
 
@@ -78,11 +87,13 @@ class _$GenderCopyWithImpl<$Res> implements $GenderCopyWith<$Res> {
   final $Res Function(Gender) _then;
 }
 
+/// @nodoc
 abstract class $FemaleCopyWith<$Res> {
   factory $FemaleCopyWith(Female value, $Res Function(Female) then) =
       _$FemaleCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$FemaleCopyWithImpl<$Res> extends _$GenderCopyWithImpl<$Res>
     implements $FemaleCopyWith<$Res> {
   _$FemaleCopyWithImpl(Female _value, $Res Function(Female) _then)
@@ -92,6 +103,7 @@ class _$FemaleCopyWithImpl<$Res> extends _$GenderCopyWithImpl<$Res>
   Female get _value => super._value as Female;
 }
 
+/// @nodoc
 class _$Female implements Female {
   const _$Female();
 
@@ -175,12 +187,14 @@ abstract class Female implements Gender {
   const factory Female() = _$Female;
 }
 
+/// @nodoc
 abstract class $GenderlessCopyWith<$Res> {
   factory $GenderlessCopyWith(
           Genderless value, $Res Function(Genderless) then) =
       _$GenderlessCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$GenderlessCopyWithImpl<$Res> extends _$GenderCopyWithImpl<$Res>
     implements $GenderlessCopyWith<$Res> {
   _$GenderlessCopyWithImpl(Genderless _value, $Res Function(Genderless) _then)
@@ -190,6 +204,7 @@ class _$GenderlessCopyWithImpl<$Res> extends _$GenderCopyWithImpl<$Res>
   Genderless get _value => super._value as Genderless;
 }
 
+/// @nodoc
 class _$Genderless implements Genderless {
   const _$Genderless();
 
@@ -273,11 +288,13 @@ abstract class Genderless implements Gender {
   const factory Genderless() = _$Genderless;
 }
 
+/// @nodoc
 abstract class $MaleCopyWith<$Res> {
   factory $MaleCopyWith(Male value, $Res Function(Male) then) =
       _$MaleCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$MaleCopyWithImpl<$Res> extends _$GenderCopyWithImpl<$Res>
     implements $MaleCopyWith<$Res> {
   _$MaleCopyWithImpl(Male _value, $Res Function(Male) _then)
@@ -287,6 +304,7 @@ class _$MaleCopyWithImpl<$Res> extends _$GenderCopyWithImpl<$Res>
   Male get _value => super._value as Male;
 }
 
+/// @nodoc
 class _$Male implements Male {
   const _$Male();
 
@@ -370,11 +388,13 @@ abstract class Male implements Gender {
   const factory Male() = _$Male;
 }
 
+/// @nodoc
 abstract class $UnknownCopyWith<$Res> {
   factory $UnknownCopyWith(Unknown value, $Res Function(Unknown) then) =
       _$UnknownCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$UnknownCopyWithImpl<$Res> extends _$GenderCopyWithImpl<$Res>
     implements $UnknownCopyWith<$Res> {
   _$UnknownCopyWithImpl(Unknown _value, $Res Function(Unknown) _then)
@@ -384,6 +404,7 @@ class _$UnknownCopyWithImpl<$Res> extends _$GenderCopyWithImpl<$Res>
   Unknown get _value => super._value as Unknown;
 }
 
+/// @nodoc
 class _$Unknown implements Unknown {
   const _$Unknown();
 

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'episode_model.dart';
 
@@ -12,9 +12,11 @@ EpisodeModel _$EpisodeModelFromJson(Map<String, dynamic> json) {
   return _EpisodeModel.fromJson(json);
 }
 
+/// @nodoc
 class _$EpisodeModelTearOff {
   const _$EpisodeModelTearOff();
 
+// ignore: unused_element
   _EpisodeModel call(
       {@required String id,
       @required String name,
@@ -27,11 +29,18 @@ class _$EpisodeModelTearOff {
       episode: episode,
     );
   }
+
+// ignore: unused_element
+  EpisodeModel fromJson(Map<String, Object> json) {
+    return EpisodeModel.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $EpisodeModel = _$EpisodeModelTearOff();
 
+/// @nodoc
 mixin _$EpisodeModel {
   String get id;
   String get name;
@@ -43,6 +52,7 @@ mixin _$EpisodeModel {
   $EpisodeModelCopyWith<EpisodeModel> get copyWith;
 }
 
+/// @nodoc
 abstract class $EpisodeModelCopyWith<$Res> {
   factory $EpisodeModelCopyWith(
           EpisodeModel value, $Res Function(EpisodeModel) then) =
@@ -54,6 +64,7 @@ abstract class $EpisodeModelCopyWith<$Res> {
       String episode});
 }
 
+/// @nodoc
 class _$EpisodeModelCopyWithImpl<$Res> implements $EpisodeModelCopyWith<$Res> {
   _$EpisodeModelCopyWithImpl(this._value, this._then);
 
@@ -77,6 +88,7 @@ class _$EpisodeModelCopyWithImpl<$Res> implements $EpisodeModelCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$EpisodeModelCopyWith<$Res>
     implements $EpisodeModelCopyWith<$Res> {
   factory _$EpisodeModelCopyWith(
@@ -90,6 +102,7 @@ abstract class _$EpisodeModelCopyWith<$Res>
       String episode});
 }
 
+/// @nodoc
 class __$EpisodeModelCopyWithImpl<$Res> extends _$EpisodeModelCopyWithImpl<$Res>
     implements _$EpisodeModelCopyWith<$Res> {
   __$EpisodeModelCopyWithImpl(
@@ -116,6 +129,8 @@ class __$EpisodeModelCopyWithImpl<$Res> extends _$EpisodeModelCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_EpisodeModel implements _EpisodeModel {
   const _$_EpisodeModel(
       {@required this.id,

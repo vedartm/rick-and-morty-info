@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'character_model.dart';
 
@@ -12,9 +12,11 @@ CharacterModel _$CharacterModelFromJson(Map<String, dynamic> json) {
   return _CharacterModel.fromJson(json);
 }
 
+/// @nodoc
 class _$CharacterModelTearOff {
   const _$CharacterModelTearOff();
 
+// ignore: unused_element
   _CharacterModel call(
       {@required
           String id,
@@ -42,11 +44,18 @@ class _$CharacterModelTearOff {
       image: image,
     );
   }
+
+// ignore: unused_element
+  CharacterModel fromJson(Map<String, Object> json) {
+    return CharacterModel.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $CharacterModel = _$CharacterModelTearOff();
 
+/// @nodoc
 mixin _$CharacterModel {
   String get id;
   String get name;
@@ -65,6 +74,7 @@ mixin _$CharacterModel {
   $CharacterModelCopyWith<CharacterModel> get copyWith;
 }
 
+/// @nodoc
 abstract class $CharacterModelCopyWith<$Res> {
   factory $CharacterModelCopyWith(
           CharacterModel value, $Res Function(CharacterModel) then) =
@@ -84,6 +94,7 @@ abstract class $CharacterModelCopyWith<$Res> {
   $GenderCopyWith<$Res> get gender;
 }
 
+/// @nodoc
 class _$CharacterModelCopyWithImpl<$Res>
     implements $CharacterModelCopyWith<$Res> {
   _$CharacterModelCopyWithImpl(this._value, this._then);
@@ -136,6 +147,7 @@ class _$CharacterModelCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$CharacterModelCopyWith<$Res>
     implements $CharacterModelCopyWith<$Res> {
   factory _$CharacterModelCopyWith(
@@ -159,6 +171,7 @@ abstract class _$CharacterModelCopyWith<$Res>
   $GenderCopyWith<$Res> get gender;
 }
 
+/// @nodoc
 class __$CharacterModelCopyWithImpl<$Res>
     extends _$CharacterModelCopyWithImpl<$Res>
     implements _$CharacterModelCopyWith<$Res> {
@@ -194,6 +207,8 @@ class __$CharacterModelCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_CharacterModel implements _CharacterModel {
   const _$_CharacterModel(
       {@required

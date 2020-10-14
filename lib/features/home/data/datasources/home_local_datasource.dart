@@ -26,8 +26,7 @@ abstract class IHomeLocalDataSource {
   Future<void> cacheEpisodes(List<EpisodeModel> models, int page);
 }
 
-@lazySingleton
-@RegisterAs(IHomeLocalDataSource)
+@LazySingleton(as: IHomeLocalDataSource)
 class HomeLocalDataSource implements IHomeLocalDataSource {
   HomeLocalDataSource(this._box);
 
