@@ -3,7 +3,7 @@
 [![Actions Status](https://github.com/excogitatr/rick-and-morty-info/workflows/deploy/badge.svg?branch=v1.1.0)](https://github.com/excogitatr/rick-and-morty-info/actions?query=workflow%3Adeploy)
 [![Actions Status](https://github.com/excogitatr/rick-and-morty-info/workflows/build/badge.svg)](https://github.com/excogitatr/rick-and-morty-info/actions?query=workflow%3Abuild)
 [![codecov](https://codecov.io/gh/excogitatr/rick-and-morty-info/branch/master/graph/badge.svg)](https://codecov.io/gh/excogitatr/rick-and-morty-info)
-[![Flutter version](https://img.shields.io/badge/flutter-v1.17.0-blue?logo=flutter)](https://flutter.dev/docs/development/tools/sdk/releases)
+[![Flutter version](https://img.shields.io/badge/flutter-v1.20.4-blue?logo=flutter)](https://flutter.dev/docs/development/tools/sdk/releases)
 [![style: effective dart](https://img.shields.io/badge/style-effective_dart-40c4ff.svg)](https://github.com/tenhobi/effective_dart)
 [![License: MIT](https://img.shields.io/badge/license-MIT-purple.svg)](https://opensource.org/licenses/MIT)
 
@@ -19,7 +19,7 @@ rick-and-morty-info is being sponsored by the following tool; please help to sup
 
 In [Martin Fowler](https://martinfowler.com/)'s words,
 
-“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” (*[Refactoring: Improving the Design of Existing Code](https://www.csie.ntu.edu.tw/~r95004/Refactoring_improving_the_design_of_existing_code.pdf)*, 1999, p. 22)
+“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” (_[Refactoring: Improving the Design of Existing Code](https://www.csie.ntu.edu.tw/~r95004/Refactoring_improving_the_design_of_existing_code.pdf)_, 1999, p. 22)
 
 With this idea in mind, I wanted to demonstrate how we can make a simple app in production grade (and I hope I made my case).
 
