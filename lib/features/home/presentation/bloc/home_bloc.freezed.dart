@@ -30,24 +30,25 @@ mixin _$HomeEvent {
   int get currentScreenIndex;
 
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result itemSelected(int currentScreenIndex),
+  TResult when<TResult extends Object>({
+    @required TResult itemSelected(int currentScreenIndex),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result itemSelected(int currentScreenIndex),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult itemSelected(int currentScreenIndex),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result itemSelected(ItemSelected value),
+  TResult map<TResult extends Object>({
+    @required TResult itemSelected(ItemSelected value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result itemSelected(ItemSelected value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult itemSelected(ItemSelected value),
+    @required TResult orElse(),
   });
 
+  @JsonKey(ignore: true)
   $HomeEventCopyWith<HomeEvent> get copyWith;
 }
 
@@ -136,14 +137,15 @@ class _$ItemSelected implements ItemSelected {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(currentScreenIndex);
 
+  @JsonKey(ignore: true)
   @override
   $ItemSelectedCopyWith<ItemSelected> get copyWith =>
       _$ItemSelectedCopyWithImpl<ItemSelected>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result itemSelected(int currentScreenIndex),
+  TResult when<TResult extends Object>({
+    @required TResult itemSelected(int currentScreenIndex),
   }) {
     assert(itemSelected != null);
     return itemSelected(currentScreenIndex);
@@ -151,9 +153,9 @@ class _$ItemSelected implements ItemSelected {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result itemSelected(int currentScreenIndex),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult itemSelected(int currentScreenIndex),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (itemSelected != null) {
@@ -164,8 +166,8 @@ class _$ItemSelected implements ItemSelected {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result itemSelected(ItemSelected value),
+  TResult map<TResult extends Object>({
+    @required TResult itemSelected(ItemSelected value),
   }) {
     assert(itemSelected != null);
     return itemSelected(this);
@@ -173,9 +175,9 @@ class _$ItemSelected implements ItemSelected {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result itemSelected(ItemSelected value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult itemSelected(ItemSelected value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (itemSelected != null) {
@@ -191,6 +193,7 @@ abstract class ItemSelected implements HomeEvent {
   @override
   int get currentScreenIndex;
   @override
+  @JsonKey(ignore: true)
   $ItemSelectedCopyWith<ItemSelected> get copyWith;
 }
 
@@ -215,24 +218,25 @@ mixin _$HomeState {
   int get selectedIndex;
 
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result navigationScreenChanged(int selectedIndex),
+  TResult when<TResult extends Object>({
+    @required TResult navigationScreenChanged(int selectedIndex),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result navigationScreenChanged(int selectedIndex),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult navigationScreenChanged(int selectedIndex),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result navigationScreenChanged(NavigationScreenChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult navigationScreenChanged(NavigationScreenChanged value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result navigationScreenChanged(NavigationScreenChanged value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult navigationScreenChanged(NavigationScreenChanged value),
+    @required TResult orElse(),
   });
 
+  @JsonKey(ignore: true)
   $HomeStateCopyWith<HomeState> get copyWith;
 }
 
@@ -320,6 +324,7 @@ class _$NavigationScreenChanged implements NavigationScreenChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(selectedIndex);
 
+  @JsonKey(ignore: true)
   @override
   $NavigationScreenChangedCopyWith<NavigationScreenChanged> get copyWith =>
       _$NavigationScreenChangedCopyWithImpl<NavigationScreenChanged>(
@@ -327,8 +332,8 @@ class _$NavigationScreenChanged implements NavigationScreenChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result navigationScreenChanged(int selectedIndex),
+  TResult when<TResult extends Object>({
+    @required TResult navigationScreenChanged(int selectedIndex),
   }) {
     assert(navigationScreenChanged != null);
     return navigationScreenChanged(selectedIndex);
@@ -336,9 +341,9 @@ class _$NavigationScreenChanged implements NavigationScreenChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result navigationScreenChanged(int selectedIndex),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult navigationScreenChanged(int selectedIndex),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (navigationScreenChanged != null) {
@@ -349,8 +354,8 @@ class _$NavigationScreenChanged implements NavigationScreenChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result navigationScreenChanged(NavigationScreenChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult navigationScreenChanged(NavigationScreenChanged value),
   }) {
     assert(navigationScreenChanged != null);
     return navigationScreenChanged(this);
@@ -358,9 +363,9 @@ class _$NavigationScreenChanged implements NavigationScreenChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result navigationScreenChanged(NavigationScreenChanged value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult navigationScreenChanged(NavigationScreenChanged value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (navigationScreenChanged != null) {
@@ -377,5 +382,6 @@ abstract class NavigationScreenChanged implements HomeState {
   @override
   int get selectedIndex;
   @override
+  @JsonKey(ignore: true)
   $NavigationScreenChangedCopyWith<NavigationScreenChanged> get copyWith;
 }

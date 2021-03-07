@@ -49,6 +49,7 @@ mixin _$EpisodeModel {
   String get episode;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EpisodeModelCopyWith<EpisodeModel> get copyWith;
 }
 
@@ -183,6 +184,7 @@ class _$_EpisodeModel implements _EpisodeModel {
       const DeepCollectionEquality().hash(airDate) ^
       const DeepCollectionEquality().hash(episode);
 
+  @JsonKey(ignore: true)
   @override
   _$EpisodeModelCopyWith<_EpisodeModel> get copyWith =>
       __$EpisodeModelCopyWithImpl<_EpisodeModel>(this, _$identity);
@@ -213,5 +215,6 @@ abstract class _EpisodeModel implements EpisodeModel {
   @override
   String get episode;
   @override
+  @JsonKey(ignore: true)
   _$EpisodeModelCopyWith<_EpisodeModel> get copyWith;
 }

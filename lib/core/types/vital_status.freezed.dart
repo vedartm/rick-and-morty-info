@@ -36,30 +36,30 @@ const $VitalStatus = _$VitalStatusTearOff();
 /// @nodoc
 mixin _$VitalStatus {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result alive(),
-    @required Result dead(),
-    @required Result unknown(),
+  TResult when<TResult extends Object>({
+    @required TResult alive(),
+    @required TResult dead(),
+    @required TResult unknown(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result alive(),
-    Result dead(),
-    Result unknown(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult alive(),
+    TResult dead(),
+    TResult unknown(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result alive(Alive value),
-    @required Result dead(Dead value),
-    @required Result unknown(Unknown value),
+  TResult map<TResult extends Object>({
+    @required TResult alive(Alive value),
+    @required TResult dead(Dead value),
+    @required TResult unknown(Unknown value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result alive(Alive value),
-    Result dead(Dead value),
-    Result unknown(Unknown value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult alive(Alive value),
+    TResult dead(Dead value),
+    TResult unknown(Unknown value),
+    @required TResult orElse(),
   });
 }
 
@@ -114,10 +114,10 @@ class _$Alive implements Alive {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result alive(),
-    @required Result dead(),
-    @required Result unknown(),
+  TResult when<TResult extends Object>({
+    @required TResult alive(),
+    @required TResult dead(),
+    @required TResult unknown(),
   }) {
     assert(alive != null);
     assert(dead != null);
@@ -127,11 +127,11 @@ class _$Alive implements Alive {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result alive(),
-    Result dead(),
-    Result unknown(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult alive(),
+    TResult dead(),
+    TResult unknown(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (alive != null) {
@@ -142,10 +142,10 @@ class _$Alive implements Alive {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result alive(Alive value),
-    @required Result dead(Dead value),
-    @required Result unknown(Unknown value),
+  TResult map<TResult extends Object>({
+    @required TResult alive(Alive value),
+    @required TResult dead(Dead value),
+    @required TResult unknown(Unknown value),
   }) {
     assert(alive != null);
     assert(dead != null);
@@ -155,11 +155,11 @@ class _$Alive implements Alive {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result alive(Alive value),
-    Result dead(Dead value),
-    Result unknown(Unknown value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult alive(Alive value),
+    TResult dead(Dead value),
+    TResult unknown(Unknown value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (alive != null) {
@@ -208,10 +208,10 @@ class _$Dead implements Dead {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result alive(),
-    @required Result dead(),
-    @required Result unknown(),
+  TResult when<TResult extends Object>({
+    @required TResult alive(),
+    @required TResult dead(),
+    @required TResult unknown(),
   }) {
     assert(alive != null);
     assert(dead != null);
@@ -221,11 +221,11 @@ class _$Dead implements Dead {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result alive(),
-    Result dead(),
-    Result unknown(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult alive(),
+    TResult dead(),
+    TResult unknown(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (dead != null) {
@@ -236,10 +236,10 @@ class _$Dead implements Dead {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result alive(Alive value),
-    @required Result dead(Dead value),
-    @required Result unknown(Unknown value),
+  TResult map<TResult extends Object>({
+    @required TResult alive(Alive value),
+    @required TResult dead(Dead value),
+    @required TResult unknown(Unknown value),
   }) {
     assert(alive != null);
     assert(dead != null);
@@ -249,11 +249,11 @@ class _$Dead implements Dead {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result alive(Alive value),
-    Result dead(Dead value),
-    Result unknown(Unknown value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult alive(Alive value),
+    TResult dead(Dead value),
+    TResult unknown(Unknown value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (dead != null) {
@@ -302,10 +302,10 @@ class _$Unknown implements Unknown {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result alive(),
-    @required Result dead(),
-    @required Result unknown(),
+  TResult when<TResult extends Object>({
+    @required TResult alive(),
+    @required TResult dead(),
+    @required TResult unknown(),
   }) {
     assert(alive != null);
     assert(dead != null);
@@ -315,11 +315,11 @@ class _$Unknown implements Unknown {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result alive(),
-    Result dead(),
-    Result unknown(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult alive(),
+    TResult dead(),
+    TResult unknown(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (unknown != null) {
@@ -330,10 +330,10 @@ class _$Unknown implements Unknown {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result alive(Alive value),
-    @required Result dead(Dead value),
-    @required Result unknown(Unknown value),
+  TResult map<TResult extends Object>({
+    @required TResult alive(Alive value),
+    @required TResult dead(Dead value),
+    @required TResult unknown(Unknown value),
   }) {
     assert(alive != null);
     assert(dead != null);
@@ -343,11 +343,11 @@ class _$Unknown implements Unknown {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result alive(Alive value),
-    Result dead(Dead value),
-    Result unknown(Unknown value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult alive(Alive value),
+    TResult dead(Dead value),
+    TResult unknown(Unknown value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (unknown != null) {

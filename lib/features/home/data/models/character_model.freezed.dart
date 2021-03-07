@@ -71,6 +71,7 @@ mixin _$CharacterModel {
   String get image;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CharacterModelCopyWith<CharacterModel> get copyWith;
 }
 
@@ -296,6 +297,7 @@ class _$_CharacterModel implements _CharacterModel {
       const DeepCollectionEquality().hash(species) ^
       const DeepCollectionEquality().hash(image);
 
+  @JsonKey(ignore: true)
   @override
   _$CharacterModelCopyWith<_CharacterModel> get copyWith =>
       __$CharacterModelCopyWithImpl<_CharacterModel>(this, _$identity);
@@ -348,5 +350,6 @@ abstract class _CharacterModel implements CharacterModel {
   @override
   String get image;
   @override
+  @JsonKey(ignore: true)
   _$CharacterModelCopyWith<_CharacterModel> get copyWith;
 }

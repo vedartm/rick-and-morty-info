@@ -39,6 +39,7 @@ mixin _$Location {
   String get type;
   String get dimension;
 
+  @JsonKey(ignore: true)
   $LocationCopyWith<Location> get copyWith;
 }
 
@@ -155,6 +156,7 @@ class _$_Location implements _Location {
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(dimension);
 
+  @JsonKey(ignore: true)
   @override
   _$LocationCopyWith<_Location> get copyWith =>
       __$LocationCopyWithImpl<_Location>(this, _$identity);
@@ -176,5 +178,6 @@ abstract class _Location implements Location {
   @override
   String get dimension;
   @override
+  @JsonKey(ignore: true)
   _$LocationCopyWith<_Location> get copyWith;
 }

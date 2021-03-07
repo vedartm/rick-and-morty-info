@@ -39,6 +39,7 @@ mixin _$Episode {
   String get airDate;
   String get episode;
 
+  @JsonKey(ignore: true)
   $EpisodeCopyWith<Episode> get copyWith;
 }
 
@@ -155,6 +156,7 @@ class _$_Episode implements _Episode {
       const DeepCollectionEquality().hash(airDate) ^
       const DeepCollectionEquality().hash(episode);
 
+  @JsonKey(ignore: true)
   @override
   _$EpisodeCopyWith<_Episode> get copyWith =>
       __$EpisodeCopyWithImpl<_Episode>(this, _$identity);
@@ -176,5 +178,6 @@ abstract class _Episode implements Episode {
   @override
   String get episode;
   @override
+  @JsonKey(ignore: true)
   _$EpisodeCopyWith<_Episode> get copyWith;
 }

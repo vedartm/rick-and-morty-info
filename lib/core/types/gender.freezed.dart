@@ -41,34 +41,34 @@ const $Gender = _$GenderTearOff();
 /// @nodoc
 mixin _$Gender {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result female(),
-    @required Result genderless(),
-    @required Result male(),
-    @required Result unknown(),
+  TResult when<TResult extends Object>({
+    @required TResult female(),
+    @required TResult genderless(),
+    @required TResult male(),
+    @required TResult unknown(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result female(),
-    Result genderless(),
-    Result male(),
-    Result unknown(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult female(),
+    TResult genderless(),
+    TResult male(),
+    TResult unknown(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result female(Female value),
-    @required Result genderless(Genderless value),
-    @required Result male(Male value),
-    @required Result unknown(Unknown value),
+  TResult map<TResult extends Object>({
+    @required TResult female(Female value),
+    @required TResult genderless(Genderless value),
+    @required TResult male(Male value),
+    @required TResult unknown(Unknown value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result female(Female value),
-    Result genderless(Genderless value),
-    Result male(Male value),
-    Result unknown(Unknown value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult female(Female value),
+    TResult genderless(Genderless value),
+    TResult male(Male value),
+    TResult unknown(Unknown value),
+    @required TResult orElse(),
   });
 }
 
@@ -122,11 +122,11 @@ class _$Female implements Female {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result female(),
-    @required Result genderless(),
-    @required Result male(),
-    @required Result unknown(),
+  TResult when<TResult extends Object>({
+    @required TResult female(),
+    @required TResult genderless(),
+    @required TResult male(),
+    @required TResult unknown(),
   }) {
     assert(female != null);
     assert(genderless != null);
@@ -137,12 +137,12 @@ class _$Female implements Female {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result female(),
-    Result genderless(),
-    Result male(),
-    Result unknown(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult female(),
+    TResult genderless(),
+    TResult male(),
+    TResult unknown(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (female != null) {
@@ -153,11 +153,11 @@ class _$Female implements Female {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result female(Female value),
-    @required Result genderless(Genderless value),
-    @required Result male(Male value),
-    @required Result unknown(Unknown value),
+  TResult map<TResult extends Object>({
+    @required TResult female(Female value),
+    @required TResult genderless(Genderless value),
+    @required TResult male(Male value),
+    @required TResult unknown(Unknown value),
   }) {
     assert(female != null);
     assert(genderless != null);
@@ -168,12 +168,12 @@ class _$Female implements Female {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result female(Female value),
-    Result genderless(Genderless value),
-    Result male(Male value),
-    Result unknown(Unknown value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult female(Female value),
+    TResult genderless(Genderless value),
+    TResult male(Male value),
+    TResult unknown(Unknown value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (female != null) {
@@ -223,11 +223,11 @@ class _$Genderless implements Genderless {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result female(),
-    @required Result genderless(),
-    @required Result male(),
-    @required Result unknown(),
+  TResult when<TResult extends Object>({
+    @required TResult female(),
+    @required TResult genderless(),
+    @required TResult male(),
+    @required TResult unknown(),
   }) {
     assert(female != null);
     assert(genderless != null);
@@ -238,12 +238,12 @@ class _$Genderless implements Genderless {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result female(),
-    Result genderless(),
-    Result male(),
-    Result unknown(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult female(),
+    TResult genderless(),
+    TResult male(),
+    TResult unknown(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (genderless != null) {
@@ -254,11 +254,11 @@ class _$Genderless implements Genderless {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result female(Female value),
-    @required Result genderless(Genderless value),
-    @required Result male(Male value),
-    @required Result unknown(Unknown value),
+  TResult map<TResult extends Object>({
+    @required TResult female(Female value),
+    @required TResult genderless(Genderless value),
+    @required TResult male(Male value),
+    @required TResult unknown(Unknown value),
   }) {
     assert(female != null);
     assert(genderless != null);
@@ -269,12 +269,12 @@ class _$Genderless implements Genderless {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result female(Female value),
-    Result genderless(Genderless value),
-    Result male(Male value),
-    Result unknown(Unknown value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult female(Female value),
+    TResult genderless(Genderless value),
+    TResult male(Male value),
+    TResult unknown(Unknown value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (genderless != null) {
@@ -323,11 +323,11 @@ class _$Male implements Male {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result female(),
-    @required Result genderless(),
-    @required Result male(),
-    @required Result unknown(),
+  TResult when<TResult extends Object>({
+    @required TResult female(),
+    @required TResult genderless(),
+    @required TResult male(),
+    @required TResult unknown(),
   }) {
     assert(female != null);
     assert(genderless != null);
@@ -338,12 +338,12 @@ class _$Male implements Male {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result female(),
-    Result genderless(),
-    Result male(),
-    Result unknown(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult female(),
+    TResult genderless(),
+    TResult male(),
+    TResult unknown(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (male != null) {
@@ -354,11 +354,11 @@ class _$Male implements Male {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result female(Female value),
-    @required Result genderless(Genderless value),
-    @required Result male(Male value),
-    @required Result unknown(Unknown value),
+  TResult map<TResult extends Object>({
+    @required TResult female(Female value),
+    @required TResult genderless(Genderless value),
+    @required TResult male(Male value),
+    @required TResult unknown(Unknown value),
   }) {
     assert(female != null);
     assert(genderless != null);
@@ -369,12 +369,12 @@ class _$Male implements Male {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result female(Female value),
-    Result genderless(Genderless value),
-    Result male(Male value),
-    Result unknown(Unknown value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult female(Female value),
+    TResult genderless(Genderless value),
+    TResult male(Male value),
+    TResult unknown(Unknown value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (male != null) {
@@ -423,11 +423,11 @@ class _$Unknown implements Unknown {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result female(),
-    @required Result genderless(),
-    @required Result male(),
-    @required Result unknown(),
+  TResult when<TResult extends Object>({
+    @required TResult female(),
+    @required TResult genderless(),
+    @required TResult male(),
+    @required TResult unknown(),
   }) {
     assert(female != null);
     assert(genderless != null);
@@ -438,12 +438,12 @@ class _$Unknown implements Unknown {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result female(),
-    Result genderless(),
-    Result male(),
-    Result unknown(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult female(),
+    TResult genderless(),
+    TResult male(),
+    TResult unknown(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (unknown != null) {
@@ -454,11 +454,11 @@ class _$Unknown implements Unknown {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result female(Female value),
-    @required Result genderless(Genderless value),
-    @required Result male(Male value),
-    @required Result unknown(Unknown value),
+  TResult map<TResult extends Object>({
+    @required TResult female(Female value),
+    @required TResult genderless(Genderless value),
+    @required TResult male(Male value),
+    @required TResult unknown(Unknown value),
   }) {
     assert(female != null);
     assert(genderless != null);
@@ -469,12 +469,12 @@ class _$Unknown implements Unknown {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result female(Female value),
-    Result genderless(Genderless value),
-    Result male(Male value),
-    Result unknown(Unknown value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult female(Female value),
+    TResult genderless(Genderless value),
+    TResult male(Male value),
+    TResult unknown(Unknown value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (unknown != null) {

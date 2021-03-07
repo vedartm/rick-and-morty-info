@@ -48,6 +48,7 @@ mixin _$LocationModel {
   String get dimension;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $LocationModelCopyWith<LocationModel> get copyWith;
 }
 
@@ -175,6 +176,7 @@ class _$_LocationModel implements _LocationModel {
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(dimension);
 
+  @JsonKey(ignore: true)
   @override
   _$LocationModelCopyWith<_LocationModel> get copyWith =>
       __$LocationModelCopyWithImpl<_LocationModel>(this, _$identity);
@@ -204,5 +206,6 @@ abstract class _LocationModel implements LocationModel {
   @override
   String get dimension;
   @override
+  @JsonKey(ignore: true)
   _$LocationModelCopyWith<_LocationModel> get copyWith;
 }
