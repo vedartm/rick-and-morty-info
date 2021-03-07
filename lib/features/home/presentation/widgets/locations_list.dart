@@ -15,7 +15,7 @@ class LocationsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeBloc, HomeState>(
       builder: (context, state) => PaginationView<Location>(
-        itemBuilder: (context, location) => ListTile(
+        itemBuilder: (context, location, index) => ListTile(
           leading: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Icon(AntIcons.heat_map),
@@ -24,7 +24,7 @@ class LocationsList extends StatelessWidget {
           subtitle: Text(location.dimension),
           trailing: Text(location.type),
         ),
-        pageFetch: context.bloc<HomeBloc>().getLocationsInPage,
+        pageFetch: context.read<HomeBloc>().getLocationsInPage,
         onEmpty: StatusEmpty(),
         onError: (exception) => StatusError(exception: exception),
       ),

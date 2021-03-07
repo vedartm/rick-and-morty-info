@@ -15,7 +15,7 @@ class EpisodesList extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeBloc, HomeState>(
       builder: (context, state) => PaginationView<Episode>(
-        itemBuilder: (context, episode) => ListTile(
+        itemBuilder: (context, episode, index) => ListTile(
           leading: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Icon(AntIcons.video_camera),
@@ -24,7 +24,7 @@ class EpisodesList extends StatelessWidget {
           subtitle: Text(episode.episode),
           trailing: Text(episode.airDate),
         ),
-        pageFetch: context.bloc<HomeBloc>().getEpisodesInPage,
+        pageFetch: context.read<HomeBloc>().getEpisodesInPage,
         onEmpty: StatusEmpty(),
         onError: (exception) => StatusError(exception: exception),
       ),

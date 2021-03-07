@@ -15,7 +15,7 @@ class CharactersList extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeBloc, HomeState>(
       builder: (context, state) => PaginationView<Character>(
-        itemBuilder: (context, character) => ListTile(
+        itemBuilder: (context, character, index) => ListTile(
           leading: CircleAvatar(
             backgroundImage: CachedNetworkImageProvider(character.image),
           ),
@@ -27,7 +27,7 @@ class CharactersList extends StatelessWidget {
             unknown: (e) => Icon(Icons.help_outline),
           ),
         ),
-        pageFetch: context.bloc<HomeBloc>().getCharactersInPage,
+        pageFetch: context.read<HomeBloc>().getCharactersInPage,
         onEmpty: StatusEmpty(),
         onError: (exception) => StatusError(exception: exception),
       ),

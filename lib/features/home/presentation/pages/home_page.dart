@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
         bottomNavigationBar: BottomNavBar(
           selectedIndex: state.selectedIndex,
           onItemSelected: (index) =>
-              context.bloc<HomeBloc>().add(HomeEvent.itemSelected(index)),
+              context.read<HomeBloc>().add(HomeEvent.itemSelected(index)),
           items: [
             BottomNavBarItem(
               textAlign: TextAlign.center,
