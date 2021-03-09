@@ -31,9 +31,9 @@ With this idea in mind, I wanted to demonstrate how we can make a simple app in 
 ## Screenshots
 
 <p>
-<img src="https://raw.githubusercontent.com/excogitatr/rick-and-morty-info/develop/assets/screen_1.png" alt="Screen 1" width="250">
-<img src="https://raw.githubusercontent.com/excogitatr/rick-and-morty-info/develop/assets/screen_2.png" alt="Screen 2" width="250">
-  <img src="https://raw.githubusercontent.com/excogitatr/rick-and-morty-info/develop/assets/screen_3.png" alt="Screen 3" width="250">
+<img src="https://raw.githubusercontent.com/excogitatr/rick-and-morty-info/develop/screenshots/screen_1.png" alt="Screen 1" width="250">
+<img src="https://raw.githubusercontent.com/excogitatr/rick-and-morty-info/develop/screenshots/screen_2.png" alt="Screen 2" width="250">
+  <img src="https://raw.githubusercontent.com/excogitatr/rick-and-morty-info/develop/screenshots/screen_3.png" alt="Screen 3" width="250">
 </p>
 
 ## Installation
