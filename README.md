@@ -20,7 +20,7 @@ With this idea in mind, I wanted to demonstrate how we can make a simple app in 
 ## "Production level" implementations
 
 - CI/CD with [GitHub Actions](https://github.com/features/actions)
-- Githooks to enusre clean commit and push
+- Githooks to ensure clean commit and push
   - Pre commit formats with `flutter format`
   - Pre push checks the code with `flutter analyze` and `flutter test`
 - Linting style with [Effective Dart](https://dart.dev/guides/language/effective-dart)
