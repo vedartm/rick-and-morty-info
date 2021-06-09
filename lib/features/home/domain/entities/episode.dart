@@ -4,9 +4,9 @@ part 'episode.freezed.dart';
 @freezed
 abstract class Episode with _$Episode {
   const factory Episode({
-    @required String id,
-    @required String name,
-    @required String airDate,
-    @required String episode,
+    required String id,
+    required String name,
+    required String airDate,
+    required String episode,
   }) = _Episode;
 }

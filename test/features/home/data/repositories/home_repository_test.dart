@@ -19,10 +19,10 @@ class MockHomeLocalDataSource extends Mock implements IHomeLocalDataSource {}
 class MockNetworkInfo extends Mock implements NetworkInfo {}
 
 void main() {
-  MockHomeLocalDataSource mockLocalDataSource;
-  MockHomeRemoteDataSource mockRemoteDataSource;
-  MockNetworkInfo mockNetworkInfo;
-  HomeRepository repository;
+  late MockHomeLocalDataSource mockLocalDataSource;
+  late MockHomeRemoteDataSource mockRemoteDataSource;
+  late MockNetworkInfo mockNetworkInfo;
+  late HomeRepository repository;
 
   setUp(() {
     mockLocalDataSource = MockHomeLocalDataSource();
@@ -85,6 +85,8 @@ void main() {
       when(() => mockNetworkInfo.isConnected).thenAnswer((_) async => true);
       when(() => mockRemoteDataSource.getCharacters(tPage))
           .thenAnswer((_) async => await tCharacterModels);
+      when(() => mockLocalDataSource.cacheCharacters(any(), any()))
+          .thenAnswer((_) async => null);
       // act
       await repository.getCharacters(tPage);
       // assert
@@ -96,6 +98,8 @@ void main() {
         // arrange
         when(() => mockRemoteDataSource.getCharacters(tPage))
             .thenAnswer((_) async => await tCharacterModels);
+        when(() => mockLocalDataSource.cacheCharacters(any(), any()))
+            .thenAnswer((_) async => null);
         // act
         final result = await repository.getCharacters(tPage);
         // assert
@@ -106,6 +110,8 @@ void main() {
         // arrange
         when(() => mockRemoteDataSource.getCharacters(tPage))
             .thenAnswer((_) async => await tCharacterModels);
+        when(() => mockLocalDataSource.cacheCharacters(any(), any()))
+            .thenAnswer((_) async => null);
         // act
         await repository.getCharacters(tPage);
         // assert

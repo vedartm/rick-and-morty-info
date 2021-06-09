@@ -31,7 +31,7 @@ class HomeRemoteDataSource implements IHomeRemoteDataSource {
       if (result.data == null) {
         return [];
       }
-      return result.data['characters']['results']
+      return result.data?['characters']['results']
           .map((e) => CharacterModel.fromJson(e))
           .cast<CharacterModel>()
           .toList();
@@ -51,7 +51,7 @@ class HomeRemoteDataSource implements IHomeRemoteDataSource {
       if (result.data == null) {
         return [];
       }
-      return result.data['episodes']['results']
+      return result.data?['episodes']['results']
           .map((e) => EpisodeModel.fromJson(e))
           .cast<EpisodeModel>()
           .toList();
@@ -71,7 +71,7 @@ class HomeRemoteDataSource implements IHomeRemoteDataSource {
       if (result.data == null) {
         return [];
       }
-      return result.data['locations']['results']
+      return result.data?['locations']['results']
           .map((e) => LocationModel.fromJson(e))
           .cast<LocationModel>()
           .toList();

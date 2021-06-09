@@ -9,7 +9,7 @@ import 'status_empty.dart';
 import 'status_error.dart';
 
 class CharactersList extends StatelessWidget {
-  const CharactersList({Key key}) : super(key: key);
+  const CharactersList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

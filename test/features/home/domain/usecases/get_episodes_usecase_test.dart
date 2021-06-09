@@ -8,8 +8,8 @@ import 'package:rick_and_morty_info/features/home/domain/usecases/get_episodes_u
 class MockHomeRepository extends Mock implements IHomeRepository {}
 
 void main() {
-  MockHomeRepository mockRepository;
-  GetEpisodesUseCase usecase;
+  late MockHomeRepository mockRepository;
+  late GetEpisodesUseCase usecase;
 
   setUp(() {
     mockRepository = MockHomeRepository();

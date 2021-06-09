@@ -4,7 +4,7 @@ description: A new Flutter project.
 version: 1.1.0
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -12,12 +12,12 @@ dependencies:
 
   # UI
   pagination_view: ^2.0.0
-  ant_icons: ^1.0.0
+  ant_icons: ^2.0.0-nullsafety.0
   cached_network_image: ^3.0.0
 
   # Network
   graphql_flutter: ^5.0.0
-  data_connection_checker: ^0.3.4
+  internet_connection_checker: ^0.0.1+1
 
   # Dart data class
   json_serializable: ^4.1.3
@@ -34,7 +34,7 @@ dependencies:
   hive: ^2.0.4
 
   # Misc
-  dartz: ^0.9.2
+  dartz: ^0.10.0-nullsafety.2
   rxdart: ^0.26.0
   path_provider: ^2.0.2
 
@@ -48,7 +48,7 @@ dev_dependencies:
   build_runner: ^2.0.4
 
   # Linting
-  effective_dart: ^1.3.0
+  effective_dart: ^1.3.1
 
   # Testing
   bloc_test: ^8.0.2

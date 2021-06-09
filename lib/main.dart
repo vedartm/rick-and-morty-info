@@ -13,7 +13,7 @@ Future<void> main() async {
 }
 
 class RMApp extends StatelessWidget {
-  const RMApp({Key key}) : super(key: key);
+  const RMApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

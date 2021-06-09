@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'vital_status.dart';
 
@@ -9,58 +9,61 @@ part of 'vital_status.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$VitalStatusTearOff {
   const _$VitalStatusTearOff();
 
-// ignore: unused_element
   Alive alive() {
     return const Alive();
   }
 
-// ignore: unused_element
   Dead dead() {
     return const Dead();
   }
 
-// ignore: unused_element
   Unknown unknown() {
     return const Unknown();
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $VitalStatus = _$VitalStatusTearOff();
 
 /// @nodoc
 mixin _$VitalStatus {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult alive(),
-    @required TResult dead(),
-    @required TResult unknown(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() alive,
+    required TResult Function() dead,
+    required TResult Function() unknown,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult alive(),
-    TResult dead(),
-    TResult unknown(),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? alive,
+    TResult Function()? dead,
+    TResult Function()? unknown,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult alive(Alive value),
-    @required TResult dead(Dead value),
-    @required TResult unknown(Unknown value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(Alive value) alive,
+    required TResult Function(Dead value) dead,
+    required TResult Function(Unknown value) unknown,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult alive(Alive value),
-    TResult dead(Dead value),
-    TResult unknown(Unknown value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Alive value)? alive,
+    TResult Function(Dead value)? dead,
+    TResult Function(Unknown value)? unknown,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -96,6 +99,7 @@ class _$AliveCopyWithImpl<$Res> extends _$VitalStatusCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$Alive implements Alive {
   const _$Alive();
 
@@ -114,26 +118,22 @@ class _$Alive implements Alive {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult alive(),
-    @required TResult dead(),
-    @required TResult unknown(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() alive,
+    required TResult Function() dead,
+    required TResult Function() unknown,
   }) {
-    assert(alive != null);
-    assert(dead != null);
-    assert(unknown != null);
     return alive();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult alive(),
-    TResult dead(),
-    TResult unknown(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? alive,
+    TResult Function()? dead,
+    TResult Function()? unknown,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (alive != null) {
       return alive();
     }
@@ -142,26 +142,22 @@ class _$Alive implements Alive {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult alive(Alive value),
-    @required TResult dead(Dead value),
-    @required TResult unknown(Unknown value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(Alive value) alive,
+    required TResult Function(Dead value) dead,
+    required TResult Function(Unknown value) unknown,
   }) {
-    assert(alive != null);
-    assert(dead != null);
-    assert(unknown != null);
     return alive(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult alive(Alive value),
-    TResult dead(Dead value),
-    TResult unknown(Unknown value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Alive value)? alive,
+    TResult Function(Dead value)? dead,
+    TResult Function(Unknown value)? unknown,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (alive != null) {
       return alive(this);
     }
@@ -190,6 +186,7 @@ class _$DeadCopyWithImpl<$Res> extends _$VitalStatusCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$Dead implements Dead {
   const _$Dead();
 
@@ -208,26 +205,22 @@ class _$Dead implements Dead {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult alive(),
-    @required TResult dead(),
-    @required TResult unknown(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() alive,
+    required TResult Function() dead,
+    required TResult Function() unknown,
   }) {
-    assert(alive != null);
-    assert(dead != null);
-    assert(unknown != null);
     return dead();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult alive(),
-    TResult dead(),
-    TResult unknown(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? alive,
+    TResult Function()? dead,
+    TResult Function()? unknown,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (dead != null) {
       return dead();
     }
@@ -236,26 +229,22 @@ class _$Dead implements Dead {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult alive(Alive value),
-    @required TResult dead(Dead value),
-    @required TResult unknown(Unknown value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(Alive value) alive,
+    required TResult Function(Dead value) dead,
+    required TResult Function(Unknown value) unknown,
   }) {
-    assert(alive != null);
-    assert(dead != null);
-    assert(unknown != null);
     return dead(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult alive(Alive value),
-    TResult dead(Dead value),
-    TResult unknown(Unknown value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Alive value)? alive,
+    TResult Function(Dead value)? dead,
+    TResult Function(Unknown value)? unknown,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (dead != null) {
       return dead(this);
     }
@@ -284,6 +273,7 @@ class _$UnknownCopyWithImpl<$Res> extends _$VitalStatusCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$Unknown implements Unknown {
   const _$Unknown();
 
@@ -302,26 +292,22 @@ class _$Unknown implements Unknown {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult alive(),
-    @required TResult dead(),
-    @required TResult unknown(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() alive,
+    required TResult Function() dead,
+    required TResult Function() unknown,
   }) {
-    assert(alive != null);
-    assert(dead != null);
-    assert(unknown != null);
     return unknown();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult alive(),
-    TResult dead(),
-    TResult unknown(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? alive,
+    TResult Function()? dead,
+    TResult Function()? unknown,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (unknown != null) {
       return unknown();
     }
@@ -330,26 +316,22 @@ class _$Unknown implements Unknown {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult alive(Alive value),
-    @required TResult dead(Dead value),
-    @required TResult unknown(Unknown value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(Alive value) alive,
+    required TResult Function(Dead value) dead,
+    required TResult Function(Unknown value) unknown,
   }) {
-    assert(alive != null);
-    assert(dead != null);
-    assert(unknown != null);
     return unknown(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult alive(Alive value),
-    TResult dead(Dead value),
-    TResult unknown(Unknown value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Alive value)? alive,
+    TResult Function(Dead value)? dead,
+    TResult Function(Unknown value)? unknown,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (unknown != null) {
       return unknown(this);
     }

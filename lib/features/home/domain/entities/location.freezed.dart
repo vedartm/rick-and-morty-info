@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'location.dart';
 
@@ -9,16 +9,18 @@ part of 'location.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$LocationTearOff {
   const _$LocationTearOff();
 
-// ignore: unused_element
   _Location call(
-      {@required String id,
-      @required String name,
-      @required String type,
-      @required String dimension}) {
+      {required String id,
+      required String name,
+      required String type,
+      required String dimension}) {
     return _Location(
       id: id,
       name: name,
@@ -29,18 +31,18 @@ class _$LocationTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Location = _$LocationTearOff();
 
 /// @nodoc
 mixin _$Location {
-  String get id;
-  String get name;
-  String get type;
-  String get dimension;
+  String get id => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String get type => throw _privateConstructorUsedError;
+  String get dimension => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $LocationCopyWith<Location> get copyWith;
+  $LocationCopyWith<Location> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -60,16 +62,28 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object type = freezed,
-    Object dimension = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? type = freezed,
+    Object? dimension = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
-      type: type == freezed ? _value.type : type as String,
-      dimension: dimension == freezed ? _value.dimension : dimension as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      dimension: dimension == freezed
+          ? _value.dimension
+          : dimension // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -93,31 +107,40 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object type = freezed,
-    Object dimension = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? type = freezed,
+    Object? dimension = freezed,
   }) {
     return _then(_Location(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
-      type: type == freezed ? _value.type : type as String,
-      dimension: dimension == freezed ? _value.dimension : dimension as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      dimension: dimension == freezed
+          ? _value.dimension
+          : dimension // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_Location implements _Location {
   const _$_Location(
-      {@required this.id,
-      @required this.name,
-      @required this.type,
-      @required this.dimension})
-      : assert(id != null),
-        assert(name != null),
-        assert(type != null),
-        assert(dimension != null);
+      {required this.id,
+      required this.name,
+      required this.type,
+      required this.dimension});
 
   @override
   final String id;
@@ -164,20 +187,21 @@ class _$_Location implements _Location {
 
 abstract class _Location implements Location {
   const factory _Location(
-      {@required String id,
-      @required String name,
-      @required String type,
-      @required String dimension}) = _$_Location;
+      {required String id,
+      required String name,
+      required String type,
+      required String dimension}) = _$_Location;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String get type;
+  String get type => throw _privateConstructorUsedError;
   @override
-  String get dimension;
+  String get dimension => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$LocationCopyWith<_Location> get copyWith;
+  _$LocationCopyWith<_Location> get copyWith =>
+      throw _privateConstructorUsedError;
 }

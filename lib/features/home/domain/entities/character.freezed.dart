@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'character.dart';
 
@@ -9,19 +9,21 @@ part of 'character.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$CharacterTearOff {
   const _$CharacterTearOff();
 
-// ignore: unused_element
   _Character call(
-      {@required String id,
-      @required String name,
-      @required VitalStatus vitalStatus,
-      @required Gender gender,
-      @required String type,
-      @required String species,
-      @required String image}) {
+      {required String id,
+      required String name,
+      required VitalStatus vitalStatus,
+      required Gender gender,
+      required String type,
+      required String species,
+      required String image}) {
     return _Character(
       id: id,
       name: name,
@@ -35,21 +37,21 @@ class _$CharacterTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Character = _$CharacterTearOff();
 
 /// @nodoc
 mixin _$Character {
-  String get id;
-  String get name;
-  VitalStatus get vitalStatus;
-  Gender get gender;
-  String get type;
-  String get species;
-  String get image;
+  String get id => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  VitalStatus get vitalStatus => throw _privateConstructorUsedError;
+  Gender get gender => throw _privateConstructorUsedError;
+  String get type => throw _privateConstructorUsedError;
+  String get species => throw _privateConstructorUsedError;
+  String get image => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $CharacterCopyWith<Character> get copyWith;
+  $CharacterCopyWith<Character> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -79,32 +81,48 @@ class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object vitalStatus = freezed,
-    Object gender = freezed,
-    Object type = freezed,
-    Object species = freezed,
-    Object image = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? vitalStatus = freezed,
+    Object? gender = freezed,
+    Object? type = freezed,
+    Object? species = freezed,
+    Object? image = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
       vitalStatus: vitalStatus == freezed
           ? _value.vitalStatus
-          : vitalStatus as VitalStatus,
-      gender: gender == freezed ? _value.gender : gender as Gender,
-      type: type == freezed ? _value.type : type as String,
-      species: species == freezed ? _value.species : species as String,
-      image: image == freezed ? _value.image : image as String,
+          : vitalStatus // ignore: cast_nullable_to_non_nullable
+              as VitalStatus,
+      gender: gender == freezed
+          ? _value.gender
+          : gender // ignore: cast_nullable_to_non_nullable
+              as Gender,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      species: species == freezed
+          ? _value.species
+          : species // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
   @override
   $VitalStatusCopyWith<$Res> get vitalStatus {
-    if (_value.vitalStatus == null) {
-      return null;
-    }
     return $VitalStatusCopyWith<$Res>(_value.vitalStatus, (value) {
       return _then(_value.copyWith(vitalStatus: value));
     });
@@ -112,9 +130,6 @@ class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
 
   @override
   $GenderCopyWith<$Res> get gender {
-    if (_value.gender == null) {
-      return null;
-    }
     return $GenderCopyWith<$Res>(_value.gender, (value) {
       return _then(_value.copyWith(gender: value));
     });
@@ -153,45 +168,58 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object vitalStatus = freezed,
-    Object gender = freezed,
-    Object type = freezed,
-    Object species = freezed,
-    Object image = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? vitalStatus = freezed,
+    Object? gender = freezed,
+    Object? type = freezed,
+    Object? species = freezed,
+    Object? image = freezed,
   }) {
     return _then(_Character(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
       vitalStatus: vitalStatus == freezed
           ? _value.vitalStatus
-          : vitalStatus as VitalStatus,
-      gender: gender == freezed ? _value.gender : gender as Gender,
-      type: type == freezed ? _value.type : type as String,
-      species: species == freezed ? _value.species : species as String,
-      image: image == freezed ? _value.image : image as String,
+          : vitalStatus // ignore: cast_nullable_to_non_nullable
+              as VitalStatus,
+      gender: gender == freezed
+          ? _value.gender
+          : gender // ignore: cast_nullable_to_non_nullable
+              as Gender,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      species: species == freezed
+          ? _value.species
+          : species // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_Character implements _Character {
   const _$_Character(
-      {@required this.id,
-      @required this.name,
-      @required this.vitalStatus,
-      @required this.gender,
-      @required this.type,
-      @required this.species,
-      @required this.image})
-      : assert(id != null),
-        assert(name != null),
-        assert(vitalStatus != null),
-        assert(gender != null),
-        assert(type != null),
-        assert(species != null),
-        assert(image != null);
+      {required this.id,
+      required this.name,
+      required this.vitalStatus,
+      required this.gender,
+      required this.type,
+      required this.species,
+      required this.image});
 
   @override
   final String id;
@@ -254,29 +282,30 @@ class _$_Character implements _Character {
 
 abstract class _Character implements Character {
   const factory _Character(
-      {@required String id,
-      @required String name,
-      @required VitalStatus vitalStatus,
-      @required Gender gender,
-      @required String type,
-      @required String species,
-      @required String image}) = _$_Character;
+      {required String id,
+      required String name,
+      required VitalStatus vitalStatus,
+      required Gender gender,
+      required String type,
+      required String species,
+      required String image}) = _$_Character;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  VitalStatus get vitalStatus;
+  VitalStatus get vitalStatus => throw _privateConstructorUsedError;
   @override
-  Gender get gender;
+  Gender get gender => throw _privateConstructorUsedError;
   @override
-  String get type;
+  String get type => throw _privateConstructorUsedError;
   @override
-  String get species;
+  String get species => throw _privateConstructorUsedError;
   @override
-  String get image;
+  String get image => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CharacterCopyWith<_Character> get copyWith;
+  _$CharacterCopyWith<_Character> get copyWith =>
+      throw _privateConstructorUsedError;
 }
