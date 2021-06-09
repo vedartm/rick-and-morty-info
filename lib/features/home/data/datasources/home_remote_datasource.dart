@@ -1,7 +1,7 @@
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:injectable/injectable.dart';
 
-import '../../../../core/error/exceptions.dart';
+import '../../../../core/error/exceptions.dart' as excptn;
 import '../../../../core/util/gql_query.dart';
 import '../models/character_model.dart';
 import '../models/episode_model.dart';
@@ -25,7 +25,7 @@ class HomeRemoteDataSource implements IHomeRemoteDataSource {
   Future<List<CharacterModel>> getCharacters(int page) async {
     try {
       final result = await _client.query(QueryOptions(
-        documentNode: gql(GqlQuery.charactersQuery),
+        document: gql(GqlQuery.charactersQuery),
         variables: {"page": page},
       ));
       if (result.data == null) {
@@ -37,7 +37,7 @@ class HomeRemoteDataSource implements IHomeRemoteDataSource {
           .toList();
     } on Exception catch (exception) {
       print(exception);
-      throw ServerException();
+      throw excptn.ServerException();
     }
   }
 
@@ -45,7 +45,7 @@ class HomeRemoteDataSource implements IHomeRemoteDataSource {
   Future<List<EpisodeModel>> getEpisodes(int page) async {
     try {
       final result = await _client.query(QueryOptions(
-        documentNode: gql(GqlQuery.episodesQuery),
+        document: gql(GqlQuery.episodesQuery),
         variables: {"page": page},
       ));
       if (result.data == null) {
@@ -57,7 +57,7 @@ class HomeRemoteDataSource implements IHomeRemoteDataSource {
           .toList();
     } on Exception catch (exception) {
       print(exception);
-      throw ServerException();
+      throw excptn.ServerException();
     }
   }
 
@@ -65,7 +65,7 @@ class HomeRemoteDataSource implements IHomeRemoteDataSource {
   Future<List<LocationModel>> getLocations(int page) async {
     try {
       final result = await _client.query(QueryOptions(
-        documentNode: gql(GqlQuery.locationsQuery),
+        document: gql(GqlQuery.locationsQuery),
         variables: {"page": page},
       ));
       if (result.data == null) {
@@ -77,7 +77,7 @@ class HomeRemoteDataSource implements IHomeRemoteDataSource {
           .toList();
     } on Exception catch (exception) {
       print(exception);
-      throw ServerException();
+      throw excptn.ServerException();
     }
   }
 }

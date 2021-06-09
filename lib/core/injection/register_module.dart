@@ -11,8 +11,8 @@ abstract class RegisterModule {
 
   @lazySingleton
   GraphQLClient get gqlClient => GraphQLClient(
-        cache: InMemoryCache(),
-        link: HttpLink(uri: 'https://rickandmortyapi.com/graphql'),
+        cache: GraphQLCache(),
+        link: HttpLink('https://rickandmortyapi.com/graphql'),
       );
 
   @preResolve
