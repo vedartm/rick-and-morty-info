@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
+import 'package:mocktail/mocktail.dart';
 import 'package:rick_and_morty_info/core/error/exceptions.dart';
 import 'package:rick_and_morty_info/core/error/failures.dart';
 import 'package:rick_and_morty_info/core/network/network_info.dart';
@@ -38,7 +38,7 @@ void main() {
   void runTestsOnline(Function body) {
     group('device is online', () {
       setUp(() {
-        when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
+        when(() => mockNetworkInfo.isConnected).thenAnswer((_) async => true);
       });
 
       body();
@@ -48,7 +48,7 @@ void main() {
   void runTestsOffline(Function body) {
     group('device is offline', () {
       setUp(() {
-        when(mockNetworkInfo.isConnected).thenAnswer((_) async => false);
+        when(() => mockNetworkInfo.isConnected).thenAnswer((_) async => false);
       });
 
       body();
@@ -82,19 +82,19 @@ void main() {
 
     test('should check if the device is online', () async {
       // arrange
-      when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
-      when(mockRemoteDataSource.getCharacters(tPage))
+      when(() => mockNetworkInfo.isConnected).thenAnswer((_) async => true);
+      when(() => mockRemoteDataSource.getCharacters(tPage))
           .thenAnswer((_) async => await tCharacterModels);
       // act
       await repository.getCharacters(tPage);
       // assert
-      verify(mockNetworkInfo.isConnected);
+      verify(() => mockNetworkInfo.isConnected);
     });
 
     runTestsOnline(() {
       test('should get characters when page number is passed', () async {
         // arrange
-        when(mockRemoteDataSource.getCharacters(tPage))
+        when(() => mockRemoteDataSource.getCharacters(tPage))
             .thenAnswer((_) async => await tCharacterModels);
         // act
         final result = await repository.getCharacters(tPage);
@@ -104,23 +104,24 @@ void main() {
 
       test('should cache characters when remote data is recieved', () async {
         // arrange
-        when(mockRemoteDataSource.getCharacters(tPage))
+        when(() => mockRemoteDataSource.getCharacters(tPage))
             .thenAnswer((_) async => await tCharacterModels);
         // act
         await repository.getCharacters(tPage);
         // assert
-        verify(mockRemoteDataSource.getCharacters(tPage));
-        verify(mockLocalDataSource.cacheCharacters(tCharacterModels, tPage));
+        verify(() => mockRemoteDataSource.getCharacters(tPage));
+        verify(
+            () => mockLocalDataSource.cacheCharacters(tCharacterModels, tPage));
       });
 
       test('should return failure when there is an exception', () async {
         // arrange
-        when(mockRemoteDataSource.getCharacters(tPage))
+        when(() => mockRemoteDataSource.getCharacters(tPage))
             .thenThrow(ServerException());
         // act
         final result = await repository.getCharacters(tPage);
         // assert
-        verify(mockRemoteDataSource.getCharacters(tPage));
+        verify(() => mockRemoteDataSource.getCharacters(tPage));
         verifyZeroInteractions(mockLocalDataSource);
         expect(result, isA<Left<Failure, List<Character>>>());
       });
@@ -129,7 +130,7 @@ void main() {
     runTestsOffline(() {
       test('should return cached data when cache is hit', () async {
         // arrange
-        when(mockLocalDataSource.getLastCharacters(tPage))
+        when(() => mockLocalDataSource.getLastCharacters(tPage))
             .thenReturn(tCharacterModels);
         // act
         final result = await repository.getCharacters(tPage);
@@ -139,7 +140,7 @@ void main() {
 
       test('should return cache failure when cache is miss', () async {
         // arrange
-        when(mockLocalDataSource.getLastCharacters(tPage))
+        when(() => mockLocalDataSource.getLastCharacters(tPage))
             .thenThrow(CacheException());
         // act
         final result = await repository.getCharacters(tPage);

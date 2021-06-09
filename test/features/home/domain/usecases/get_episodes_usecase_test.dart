@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
+import 'package:mocktail/mocktail.dart';
 import 'package:rick_and_morty_info/features/home/domain/entities/episode.dart';
 import 'package:rick_and_morty_info/features/home/domain/repositories/i_home_repository.dart';
 import 'package:rick_and_morty_info/features/home/domain/usecases/get_episodes_usecase.dart';
@@ -28,7 +28,7 @@ void main() {
 
   test('should return list of episodes when requested with offset', () async {
     // arrange
-    when(mockRepository.getEpisodes(tPage))
+    when(() => mockRepository.getEpisodes(tPage))
         .thenAnswer((_) async => await Right(tEpisodes));
     // act
     final result = await usecase(EpisodeParams(tPage));

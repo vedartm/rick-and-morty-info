@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
+import 'package:mocktail/mocktail.dart';
 import 'package:rick_and_morty_info/core/types/gender.dart';
 import 'package:rick_and_morty_info/core/types/vital_status.dart';
 import 'package:rick_and_morty_info/features/home/domain/entities/character.dart';
@@ -32,7 +32,7 @@ void main() {
 
   test('should return list of characters when requested with offset', () async {
     // arrange
-    when(mockRepository.getCharacters(tPage))
+    when(() => mockRepository.getCharacters(tPage))
         .thenAnswer((_) async => await Right(tCharacters));
     // act
     final result = await usecase(CharacterParams(tPage));
