@@ -9,7 +9,7 @@ import 'status_empty.dart';
 import 'status_error.dart';
 
 class EpisodesList extends StatelessWidget {
-  const EpisodesList({Key key}) : super(key: key);
+  const EpisodesList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

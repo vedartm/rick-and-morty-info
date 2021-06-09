@@ -9,8 +9,8 @@ import 'package:rick_and_morty_info/features/home/domain/usecases/get_locations_
 class MockHomeRepository extends Mock implements IHomeRepository {}
 
 void main() {
-  MockHomeRepository mockRepository;
-  GetLocationsUseCase usecase;
+  late MockHomeRepository mockRepository;
+  late GetLocationsUseCase usecase;
 
   setUp(() {
     mockRepository = MockHomeRepository();

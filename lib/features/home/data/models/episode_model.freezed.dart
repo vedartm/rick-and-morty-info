@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'episode_model.dart';
 
@@ -8,6 +8,10 @@ part of 'episode_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 EpisodeModel _$EpisodeModelFromJson(Map<String, dynamic> json) {
   return _EpisodeModel.fromJson(json);
 }
@@ -16,12 +20,11 @@ EpisodeModel _$EpisodeModelFromJson(Map<String, dynamic> json) {
 class _$EpisodeModelTearOff {
   const _$EpisodeModelTearOff();
 
-// ignore: unused_element
   _EpisodeModel call(
-      {@required String id,
-      @required String name,
-      @required @JsonKey(name: 'air_date') String airDate,
-      @required String episode}) {
+      {required String id,
+      required String name,
+      @JsonKey(name: 'air_date') required String airDate,
+      required String episode}) {
     return _EpisodeModel(
       id: id,
       name: name,
@@ -30,27 +33,26 @@ class _$EpisodeModelTearOff {
     );
   }
 
-// ignore: unused_element
   EpisodeModel fromJson(Map<String, Object> json) {
     return EpisodeModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $EpisodeModel = _$EpisodeModelTearOff();
 
 /// @nodoc
 mixin _$EpisodeModel {
-  String get id;
-  String get name;
+  String get id => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'air_date')
-  String get airDate;
-  String get episode;
+  String get airDate => throw _privateConstructorUsedError;
+  String get episode => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EpisodeModelCopyWith<EpisodeModel> get copyWith;
+  $EpisodeModelCopyWith<EpisodeModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -75,16 +77,28 @@ class _$EpisodeModelCopyWithImpl<$Res> implements $EpisodeModelCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object airDate = freezed,
-    Object episode = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? airDate = freezed,
+    Object? episode = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
-      airDate: airDate == freezed ? _value.airDate : airDate as String,
-      episode: episode == freezed ? _value.episode : episode as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      airDate: airDate == freezed
+          ? _value.airDate
+          : airDate // ignore: cast_nullable_to_non_nullable
+              as String,
+      episode: episode == freezed
+          ? _value.episode
+          : episode // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -115,33 +129,40 @@ class __$EpisodeModelCopyWithImpl<$Res> extends _$EpisodeModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object airDate = freezed,
-    Object episode = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? airDate = freezed,
+    Object? episode = freezed,
   }) {
     return _then(_EpisodeModel(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
-      airDate: airDate == freezed ? _value.airDate : airDate as String,
-      episode: episode == freezed ? _value.episode : episode as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      airDate: airDate == freezed
+          ? _value.airDate
+          : airDate // ignore: cast_nullable_to_non_nullable
+              as String,
+      episode: episode == freezed
+          ? _value.episode
+          : episode // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EpisodeModel implements _EpisodeModel {
   const _$_EpisodeModel(
-      {@required this.id,
-      @required this.name,
-      @required @JsonKey(name: 'air_date') this.airDate,
-      @required this.episode})
-      : assert(id != null),
-        assert(name != null),
-        assert(airDate != null),
-        assert(episode != null);
+      {required this.id,
+      required this.name,
+      @JsonKey(name: 'air_date') required this.airDate,
+      required this.episode});
 
   factory _$_EpisodeModel.fromJson(Map<String, dynamic> json) =>
       _$_$_EpisodeModelFromJson(json);
@@ -197,24 +218,25 @@ class _$_EpisodeModel implements _EpisodeModel {
 
 abstract class _EpisodeModel implements EpisodeModel {
   const factory _EpisodeModel(
-      {@required String id,
-      @required String name,
-      @required @JsonKey(name: 'air_date') String airDate,
-      @required String episode}) = _$_EpisodeModel;
+      {required String id,
+      required String name,
+      @JsonKey(name: 'air_date') required String airDate,
+      required String episode}) = _$_EpisodeModel;
 
   factory _EpisodeModel.fromJson(Map<String, dynamic> json) =
       _$_EpisodeModel.fromJson;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'air_date')
-  String get airDate;
+  String get airDate => throw _privateConstructorUsedError;
   @override
-  String get episode;
+  String get episode => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$EpisodeModelCopyWith<_EpisodeModel> get copyWith;
+  _$EpisodeModelCopyWith<_EpisodeModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

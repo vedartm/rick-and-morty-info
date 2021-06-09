@@ -4,9 +4,9 @@ part 'location.freezed.dart';
 @freezed
 abstract class Location with _$Location {
   const factory Location({
-    @required String id,
-    @required String name,
-    @required String type,
-    @required String dimension,
+    required String id,
+    required String name,
+    required String type,
+    required String dimension,
   }) = _Location;
 }

@@ -1,13 +1,14 @@
-import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:hive/hive.dart';
 import 'package:injectable/injectable.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:path_provider/path_provider.dart';
 
 @module
 abstract class RegisterModule {
   @lazySingleton
-  DataConnectionChecker get connectionChecker => DataConnectionChecker();
+  InternetConnectionChecker get connectionChecker =>
+      InternetConnectionChecker();
 
   @lazySingleton
   GraphQLClient get gqlClient => GraphQLClient(

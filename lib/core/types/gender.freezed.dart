@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'gender.dart';
 
@@ -9,67 +9,69 @@ part of 'gender.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$GenderTearOff {
   const _$GenderTearOff();
 
-// ignore: unused_element
   Female female() {
     return const Female();
   }
 
-// ignore: unused_element
   Genderless genderless() {
     return const Genderless();
   }
 
-// ignore: unused_element
   Male male() {
     return const Male();
   }
 
-// ignore: unused_element
   Unknown unknown() {
     return const Unknown();
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Gender = _$GenderTearOff();
 
 /// @nodoc
 mixin _$Gender {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult female(),
-    @required TResult genderless(),
-    @required TResult male(),
-    @required TResult unknown(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() female,
+    required TResult Function() genderless,
+    required TResult Function() male,
+    required TResult Function() unknown,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult female(),
-    TResult genderless(),
-    TResult male(),
-    TResult unknown(),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? female,
+    TResult Function()? genderless,
+    TResult Function()? male,
+    TResult Function()? unknown,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult female(Female value),
-    @required TResult genderless(Genderless value),
-    @required TResult male(Male value),
-    @required TResult unknown(Unknown value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(Female value) female,
+    required TResult Function(Genderless value) genderless,
+    required TResult Function(Male value) male,
+    required TResult Function(Unknown value) unknown,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult female(Female value),
-    TResult genderless(Genderless value),
-    TResult male(Male value),
-    TResult unknown(Unknown value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Female value)? female,
+    TResult Function(Genderless value)? genderless,
+    TResult Function(Male value)? male,
+    TResult Function(Unknown value)? unknown,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -104,6 +106,7 @@ class _$FemaleCopyWithImpl<$Res> extends _$GenderCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$Female implements Female {
   const _$Female();
 
@@ -122,29 +125,24 @@ class _$Female implements Female {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult female(),
-    @required TResult genderless(),
-    @required TResult male(),
-    @required TResult unknown(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() female,
+    required TResult Function() genderless,
+    required TResult Function() male,
+    required TResult Function() unknown,
   }) {
-    assert(female != null);
-    assert(genderless != null);
-    assert(male != null);
-    assert(unknown != null);
     return female();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult female(),
-    TResult genderless(),
-    TResult male(),
-    TResult unknown(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? female,
+    TResult Function()? genderless,
+    TResult Function()? male,
+    TResult Function()? unknown,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (female != null) {
       return female();
     }
@@ -153,29 +151,24 @@ class _$Female implements Female {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult female(Female value),
-    @required TResult genderless(Genderless value),
-    @required TResult male(Male value),
-    @required TResult unknown(Unknown value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(Female value) female,
+    required TResult Function(Genderless value) genderless,
+    required TResult Function(Male value) male,
+    required TResult Function(Unknown value) unknown,
   }) {
-    assert(female != null);
-    assert(genderless != null);
-    assert(male != null);
-    assert(unknown != null);
     return female(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult female(Female value),
-    TResult genderless(Genderless value),
-    TResult male(Male value),
-    TResult unknown(Unknown value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Female value)? female,
+    TResult Function(Genderless value)? genderless,
+    TResult Function(Male value)? male,
+    TResult Function(Unknown value)? unknown,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (female != null) {
       return female(this);
     }
@@ -205,6 +198,7 @@ class _$GenderlessCopyWithImpl<$Res> extends _$GenderCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$Genderless implements Genderless {
   const _$Genderless();
 
@@ -223,29 +217,24 @@ class _$Genderless implements Genderless {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult female(),
-    @required TResult genderless(),
-    @required TResult male(),
-    @required TResult unknown(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() female,
+    required TResult Function() genderless,
+    required TResult Function() male,
+    required TResult Function() unknown,
   }) {
-    assert(female != null);
-    assert(genderless != null);
-    assert(male != null);
-    assert(unknown != null);
     return genderless();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult female(),
-    TResult genderless(),
-    TResult male(),
-    TResult unknown(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? female,
+    TResult Function()? genderless,
+    TResult Function()? male,
+    TResult Function()? unknown,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (genderless != null) {
       return genderless();
     }
@@ -254,29 +243,24 @@ class _$Genderless implements Genderless {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult female(Female value),
-    @required TResult genderless(Genderless value),
-    @required TResult male(Male value),
-    @required TResult unknown(Unknown value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(Female value) female,
+    required TResult Function(Genderless value) genderless,
+    required TResult Function(Male value) male,
+    required TResult Function(Unknown value) unknown,
   }) {
-    assert(female != null);
-    assert(genderless != null);
-    assert(male != null);
-    assert(unknown != null);
     return genderless(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult female(Female value),
-    TResult genderless(Genderless value),
-    TResult male(Male value),
-    TResult unknown(Unknown value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Female value)? female,
+    TResult Function(Genderless value)? genderless,
+    TResult Function(Male value)? male,
+    TResult Function(Unknown value)? unknown,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (genderless != null) {
       return genderless(this);
     }
@@ -305,6 +289,7 @@ class _$MaleCopyWithImpl<$Res> extends _$GenderCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$Male implements Male {
   const _$Male();
 
@@ -323,29 +308,24 @@ class _$Male implements Male {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult female(),
-    @required TResult genderless(),
-    @required TResult male(),
-    @required TResult unknown(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() female,
+    required TResult Function() genderless,
+    required TResult Function() male,
+    required TResult Function() unknown,
   }) {
-    assert(female != null);
-    assert(genderless != null);
-    assert(male != null);
-    assert(unknown != null);
     return male();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult female(),
-    TResult genderless(),
-    TResult male(),
-    TResult unknown(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? female,
+    TResult Function()? genderless,
+    TResult Function()? male,
+    TResult Function()? unknown,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (male != null) {
       return male();
     }
@@ -354,29 +334,24 @@ class _$Male implements Male {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult female(Female value),
-    @required TResult genderless(Genderless value),
-    @required TResult male(Male value),
-    @required TResult unknown(Unknown value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(Female value) female,
+    required TResult Function(Genderless value) genderless,
+    required TResult Function(Male value) male,
+    required TResult Function(Unknown value) unknown,
   }) {
-    assert(female != null);
-    assert(genderless != null);
-    assert(male != null);
-    assert(unknown != null);
     return male(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult female(Female value),
-    TResult genderless(Genderless value),
-    TResult male(Male value),
-    TResult unknown(Unknown value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Female value)? female,
+    TResult Function(Genderless value)? genderless,
+    TResult Function(Male value)? male,
+    TResult Function(Unknown value)? unknown,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (male != null) {
       return male(this);
     }
@@ -405,6 +380,7 @@ class _$UnknownCopyWithImpl<$Res> extends _$GenderCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$Unknown implements Unknown {
   const _$Unknown();
 
@@ -423,29 +399,24 @@ class _$Unknown implements Unknown {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult female(),
-    @required TResult genderless(),
-    @required TResult male(),
-    @required TResult unknown(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() female,
+    required TResult Function() genderless,
+    required TResult Function() male,
+    required TResult Function() unknown,
   }) {
-    assert(female != null);
-    assert(genderless != null);
-    assert(male != null);
-    assert(unknown != null);
     return unknown();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult female(),
-    TResult genderless(),
-    TResult male(),
-    TResult unknown(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? female,
+    TResult Function()? genderless,
+    TResult Function()? male,
+    TResult Function()? unknown,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (unknown != null) {
       return unknown();
     }
@@ -454,29 +425,24 @@ class _$Unknown implements Unknown {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult female(Female value),
-    @required TResult genderless(Genderless value),
-    @required TResult male(Male value),
-    @required TResult unknown(Unknown value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(Female value) female,
+    required TResult Function(Genderless value) genderless,
+    required TResult Function(Male value) male,
+    required TResult Function(Unknown value) unknown,
   }) {
-    assert(female != null);
-    assert(genderless != null);
-    assert(male != null);
-    assert(unknown != null);
     return unknown(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult female(Female value),
-    TResult genderless(Genderless value),
-    TResult male(Male value),
-    TResult unknown(Unknown value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Female value)? female,
+    TResult Function(Genderless value)? genderless,
+    TResult Function(Male value)? male,
+    TResult Function(Unknown value)? unknown,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (unknown != null) {
       return unknown(this);
     }

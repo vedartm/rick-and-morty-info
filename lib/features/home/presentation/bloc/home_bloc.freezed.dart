@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'home_bloc.dart';
 
@@ -9,11 +9,13 @@ part of 'home_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$HomeEventTearOff {
   const _$HomeEventTearOff();
 
-// ignore: unused_element
   ItemSelected itemSelected(int currentScreenIndex) {
     return ItemSelected(
       currentScreenIndex,
@@ -22,34 +24,38 @@ class _$HomeEventTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $HomeEvent = _$HomeEventTearOff();
 
 /// @nodoc
 mixin _$HomeEvent {
-  int get currentScreenIndex;
+  int get currentScreenIndex => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult itemSelected(int currentScreenIndex),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function(int currentScreenIndex) itemSelected,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult itemSelected(int currentScreenIndex),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int currentScreenIndex)? itemSelected,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult itemSelected(ItemSelected value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(ItemSelected value) itemSelected,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult itemSelected(ItemSelected value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ItemSelected value)? itemSelected,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $HomeEventCopyWith<HomeEvent> get copyWith;
+  $HomeEventCopyWith<HomeEvent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -69,12 +75,13 @@ class _$HomeEventCopyWithImpl<$Res> implements $HomeEventCopyWith<$Res> {
 
   @override
   $Res call({
-    Object currentScreenIndex = freezed,
+    Object? currentScreenIndex = freezed,
   }) {
     return _then(_value.copyWith(
       currentScreenIndex: currentScreenIndex == freezed
           ? _value.currentScreenIndex
-          : currentScreenIndex as int,
+          : currentScreenIndex // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -100,20 +107,21 @@ class _$ItemSelectedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object currentScreenIndex = freezed,
+    Object? currentScreenIndex = freezed,
   }) {
     return _then(ItemSelected(
       currentScreenIndex == freezed
           ? _value.currentScreenIndex
-          : currentScreenIndex as int,
+          : currentScreenIndex // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
 /// @nodoc
+
 class _$ItemSelected implements ItemSelected {
-  const _$ItemSelected(this.currentScreenIndex)
-      : assert(currentScreenIndex != null);
+  const _$ItemSelected(this.currentScreenIndex);
 
   @override
   final int currentScreenIndex;
@@ -144,20 +152,18 @@ class _$ItemSelected implements ItemSelected {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult itemSelected(int currentScreenIndex),
+  TResult when<TResult extends Object?>({
+    required TResult Function(int currentScreenIndex) itemSelected,
   }) {
-    assert(itemSelected != null);
     return itemSelected(currentScreenIndex);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult itemSelected(int currentScreenIndex),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int currentScreenIndex)? itemSelected,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (itemSelected != null) {
       return itemSelected(currentScreenIndex);
     }
@@ -166,20 +172,18 @@ class _$ItemSelected implements ItemSelected {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult itemSelected(ItemSelected value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(ItemSelected value) itemSelected,
   }) {
-    assert(itemSelected != null);
     return itemSelected(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult itemSelected(ItemSelected value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ItemSelected value)? itemSelected,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (itemSelected != null) {
       return itemSelected(this);
     }
@@ -191,17 +195,17 @@ abstract class ItemSelected implements HomeEvent {
   const factory ItemSelected(int currentScreenIndex) = _$ItemSelected;
 
   @override
-  int get currentScreenIndex;
+  int get currentScreenIndex => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $ItemSelectedCopyWith<ItemSelected> get copyWith;
+  $ItemSelectedCopyWith<ItemSelected> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 class _$HomeStateTearOff {
   const _$HomeStateTearOff();
 
-// ignore: unused_element
   NavigationScreenChanged navigationScreenChanged(int selectedIndex) {
     return NavigationScreenChanged(
       selectedIndex,
@@ -210,34 +214,39 @@ class _$HomeStateTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $HomeState = _$HomeStateTearOff();
 
 /// @nodoc
 mixin _$HomeState {
-  int get selectedIndex;
+  int get selectedIndex => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult navigationScreenChanged(int selectedIndex),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function(int selectedIndex) navigationScreenChanged,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult navigationScreenChanged(int selectedIndex),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int selectedIndex)? navigationScreenChanged,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult navigationScreenChanged(NavigationScreenChanged value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(NavigationScreenChanged value)
+        navigationScreenChanged,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult navigationScreenChanged(NavigationScreenChanged value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NavigationScreenChanged value)? navigationScreenChanged,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $HomeStateCopyWith<HomeState> get copyWith;
+  $HomeStateCopyWith<HomeState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -257,12 +266,13 @@ class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
 
   @override
   $Res call({
-    Object selectedIndex = freezed,
+    Object? selectedIndex = freezed,
   }) {
     return _then(_value.copyWith(
       selectedIndex: selectedIndex == freezed
           ? _value.selectedIndex
-          : selectedIndex as int,
+          : selectedIndex // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -290,18 +300,21 @@ class _$NavigationScreenChangedCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object selectedIndex = freezed,
+    Object? selectedIndex = freezed,
   }) {
     return _then(NavigationScreenChanged(
-      selectedIndex == freezed ? _value.selectedIndex : selectedIndex as int,
+      selectedIndex == freezed
+          ? _value.selectedIndex
+          : selectedIndex // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
 /// @nodoc
+
 class _$NavigationScreenChanged implements NavigationScreenChanged {
-  const _$NavigationScreenChanged(this.selectedIndex)
-      : assert(selectedIndex != null);
+  const _$NavigationScreenChanged(this.selectedIndex);
 
   @override
   final int selectedIndex;
@@ -332,20 +345,18 @@ class _$NavigationScreenChanged implements NavigationScreenChanged {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult navigationScreenChanged(int selectedIndex),
+  TResult when<TResult extends Object?>({
+    required TResult Function(int selectedIndex) navigationScreenChanged,
   }) {
-    assert(navigationScreenChanged != null);
     return navigationScreenChanged(selectedIndex);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult navigationScreenChanged(int selectedIndex),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int selectedIndex)? navigationScreenChanged,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (navigationScreenChanged != null) {
       return navigationScreenChanged(selectedIndex);
     }
@@ -354,20 +365,19 @@ class _$NavigationScreenChanged implements NavigationScreenChanged {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult navigationScreenChanged(NavigationScreenChanged value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NavigationScreenChanged value)
+        navigationScreenChanged,
   }) {
-    assert(navigationScreenChanged != null);
     return navigationScreenChanged(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult navigationScreenChanged(NavigationScreenChanged value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NavigationScreenChanged value)? navigationScreenChanged,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (navigationScreenChanged != null) {
       return navigationScreenChanged(this);
     }
@@ -380,8 +390,9 @@ abstract class NavigationScreenChanged implements HomeState {
       _$NavigationScreenChanged;
 
   @override
-  int get selectedIndex;
+  int get selectedIndex => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $NavigationScreenChangedCopyWith<NavigationScreenChanged> get copyWith;
+  $NavigationScreenChangedCopyWith<NavigationScreenChanged> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -8,10 +8,10 @@ part 'episode_model.g.dart';
 @freezed
 abstract class EpisodeModel with _$EpisodeModel {
   const factory EpisodeModel({
-    @required String id,
-    @required String name,
-    @JsonKey(name: 'air_date') @required String airDate,
-    @required String episode,
+    required String id,
+    required String name,
+    @JsonKey(name: 'air_date') required String airDate,
+    required String episode,
   }) = _EpisodeModel;
 
   factory EpisodeModel.fromJson(Map<String, dynamic> json) =>

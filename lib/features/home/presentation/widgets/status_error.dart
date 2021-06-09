@@ -4,8 +4,8 @@ import '../../../../core/error/exceptions.dart';
 
 class StatusError extends StatelessWidget {
   const StatusError({
-    Key key,
-    @required this.exception,
+    Key? key,
+    required this.exception,
   }) : super(key: key);
 
   final Exception exception;
