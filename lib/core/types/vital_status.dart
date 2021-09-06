@@ -1,12 +1,6 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:functional_enum_annotation/functional_enum_annotation.dart';
 
-part 'vital_status.freezed.dart';
+part 'vital_status.g.dart';
 
-@freezed
-abstract class VitalStatus with _$VitalStatus {
-  const factory VitalStatus.alive() = Alive;
-
-  const factory VitalStatus.dead() = Dead;
-
-  const factory VitalStatus.unknown() = Unknown;
-}
+@functionalEnum
+enum VitalStatus { alive, dead, unknown }

@@ -66,9 +66,6 @@ abstract class $CharacterCopyWith<$Res> {
       String type,
       String species,
       String image});
-
-  $VitalStatusCopyWith<$Res> get vitalStatus;
-  $GenderCopyWith<$Res> get gender;
 }
 
 /// @nodoc
@@ -120,20 +117,6 @@ class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
               as String,
     ));
   }
-
-  @override
-  $VitalStatusCopyWith<$Res> get vitalStatus {
-    return $VitalStatusCopyWith<$Res>(_value.vitalStatus, (value) {
-      return _then(_value.copyWith(vitalStatus: value));
-    });
-  }
-
-  @override
-  $GenderCopyWith<$Res> get gender {
-    return $GenderCopyWith<$Res>(_value.gender, (value) {
-      return _then(_value.copyWith(gender: value));
-    });
-  }
 }
 
 /// @nodoc
@@ -150,11 +133,6 @@ abstract class _$CharacterCopyWith<$Res> implements $CharacterCopyWith<$Res> {
       String type,
       String species,
       String image});
-
-  @override
-  $VitalStatusCopyWith<$Res> get vitalStatus;
-  @override
-  $GenderCopyWith<$Res> get gender;
 }
 
 /// @nodoc

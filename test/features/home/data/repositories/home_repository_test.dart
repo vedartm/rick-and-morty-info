@@ -72,8 +72,8 @@ void main() {
       CharacterModel(
         id: '1',
         name: 'Rick Sanchez',
-        vitalStatus: const VitalStatus.alive(),
-        gender: const Gender.male(),
+        vitalStatus: VitalStatus.alive,
+        gender: Gender.male,
         type: '',
         species: 'Human',
         image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
