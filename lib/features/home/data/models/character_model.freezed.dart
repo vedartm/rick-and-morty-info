@@ -23,9 +23,10 @@ class _$CharacterModelTearOff {
   _CharacterModel call(
       {required String id,
       required String name,
-      @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString, name: 'status')
+      @JsonKey(name: 'status')
+      @VitalStatusConverter()
           required VitalStatus vitalStatus,
-      @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)
+      @GenderConverter()
           required Gender gender,
       required String type,
       required String species,
@@ -53,12 +54,10 @@ const $CharacterModel = _$CharacterModelTearOff();
 mixin _$CharacterModel {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  @JsonKey(
-      fromJson: Mapper.statusInType,
-      toJson: Mapper.statusInString,
-      name: 'status')
+  @JsonKey(name: 'status')
+  @VitalStatusConverter()
   VitalStatus get vitalStatus => throw _privateConstructorUsedError;
-  @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)
+  @GenderConverter()
   Gender get gender => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
   String get species => throw _privateConstructorUsedError;
@@ -78,10 +77,8 @@ abstract class $CharacterModelCopyWith<$Res> {
   $Res call(
       {String id,
       String name,
-      @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString, name: 'status')
-          VitalStatus vitalStatus,
-      @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)
-          Gender gender,
+      @JsonKey(name: 'status') @VitalStatusConverter() VitalStatus vitalStatus,
+      @GenderConverter() Gender gender,
       String type,
       String species,
       String image});
@@ -149,10 +146,8 @@ abstract class _$CharacterModelCopyWith<$Res>
   $Res call(
       {String id,
       String name,
-      @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString, name: 'status')
-          VitalStatus vitalStatus,
-      @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)
-          Gender gender,
+      @JsonKey(name: 'status') @VitalStatusConverter() VitalStatus vitalStatus,
+      @GenderConverter() Gender gender,
       String type,
       String species,
       String image});
@@ -218,9 +213,10 @@ class _$_CharacterModel implements _CharacterModel {
   const _$_CharacterModel(
       {required this.id,
       required this.name,
-      @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString, name: 'status')
+      @JsonKey(name: 'status')
+      @VitalStatusConverter()
           required this.vitalStatus,
-      @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)
+      @GenderConverter()
           required this.gender,
       required this.type,
       required this.species,
@@ -234,13 +230,11 @@ class _$_CharacterModel implements _CharacterModel {
   @override
   final String name;
   @override
-  @JsonKey(
-      fromJson: Mapper.statusInType,
-      toJson: Mapper.statusInString,
-      name: 'status')
+  @JsonKey(name: 'status')
+  @VitalStatusConverter()
   final VitalStatus vitalStatus;
   @override
-  @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)
+  @GenderConverter()
   final Gender gender;
   @override
   final String type;
@@ -302,9 +296,10 @@ abstract class _CharacterModel implements CharacterModel {
   const factory _CharacterModel(
       {required String id,
       required String name,
-      @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString, name: 'status')
+      @JsonKey(name: 'status')
+      @VitalStatusConverter()
           required VitalStatus vitalStatus,
-      @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)
+      @GenderConverter()
           required Gender gender,
       required String type,
       required String species,
@@ -318,13 +313,11 @@ abstract class _CharacterModel implements CharacterModel {
   @override
   String get name => throw _privateConstructorUsedError;
   @override
-  @JsonKey(
-      fromJson: Mapper.statusInType,
-      toJson: Mapper.statusInString,
-      name: 'status')
+  @JsonKey(name: 'status')
+  @VitalStatusConverter()
   VitalStatus get vitalStatus => throw _privateConstructorUsedError;
   @override
-  @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)
+  @GenderConverter()
   Gender get gender => throw _privateConstructorUsedError;
   @override
   String get type => throw _privateConstructorUsedError;

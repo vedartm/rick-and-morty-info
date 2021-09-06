@@ -1,16 +1,14 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+
 import '../types/gender.dart';
 import '../types/vital_status.dart';
 
-class Mapper {
-  static String genderInString(Gender gender) => gender.when(
-        female: () => 'Female',
-        genderless: () => 'Genderless',
-        male: () => 'Male',
-        unknown: () => 'unknown',
-      );
+class GenderConverter implements JsonConverter<Gender, String> {
+  const GenderConverter();
 
-  static Gender genderInType(String value) {
-    switch (value) {
+  @override
+  Gender fromJson(String json) {
+    switch (json) {
       case 'Female':
         return Gender.female;
       case 'Male':
@@ -22,14 +20,23 @@ class Mapper {
     }
   }
 
-  static String statusInString(VitalStatus vitalStatus) => vitalStatus.when(
-        alive: () => 'Alive',
-        dead: () => 'Dead',
-        unknown: () => 'unknown',
-      );
+  @override
+  String toJson(Gender object) {
+    return object.when(
+      female: () => 'Female',
+      genderless: () => 'Genderless',
+      male: () => 'Male',
+      unknown: () => 'unknown',
+    );
+  }
+}
 
-  static VitalStatus statusInType(String value) {
-    switch (value) {
+class VitalStatusConverter implements JsonConverter<VitalStatus, String> {
+  const VitalStatusConverter();
+
+  @override
+  VitalStatus fromJson(String json) {
+    switch (json) {
       case 'Alive':
         return VitalStatus.alive;
       case 'Dead':
@@ -37,5 +44,14 @@ class Mapper {
       default:
         return VitalStatus.unknown;
     }
+  }
+
+  @override
+  String toJson(VitalStatus object) {
+    return object.when(
+      alive: () => 'Alive',
+      dead: () => 'Dead',
+      unknown: () => 'unknown',
+    );
   }
 }
