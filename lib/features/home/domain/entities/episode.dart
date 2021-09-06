@@ -1,8 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+
 part 'episode.freezed.dart';
 
 @freezed
-abstract class Episode with _$Episode {
+class Episode with _$Episode {
   const factory Episode({
     required String id,
     required String name,
