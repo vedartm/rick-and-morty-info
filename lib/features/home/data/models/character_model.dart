@@ -9,14 +9,14 @@ part 'character_model.freezed.dart';
 part 'character_model.g.dart';
 
 @freezed
-abstract class CharacterModel with _$CharacterModel {
+class CharacterModel with _$CharacterModel {
   const factory CharacterModel({
     required String id,
     required String name,
-    @JsonKey(fromJson: Mapper.statusInType, toJson: Mapper.statusInString, name: 'status')
+    @JsonKey(name: 'status')
+    @VitalStatusConverter()
         required VitalStatus vitalStatus,
-    @JsonKey(fromJson: Mapper.genderInType, toJson: Mapper.genderInString)
-        required Gender gender,
+    @GenderConverter() required Gender gender,
     required String type,
     required String species,
     required String image,

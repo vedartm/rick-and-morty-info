@@ -6,7 +6,7 @@ import '../../../../core/types/vital_status.dart';
 part 'character.freezed.dart';
 
 @freezed
-abstract class Character with _$Character {
+class Character with _$Character {
   const factory Character({
     required String id,
     required String name,

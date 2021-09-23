@@ -6,7 +6,7 @@ part 'episode_model.freezed.dart';
 part 'episode_model.g.dart';
 
 @freezed
-abstract class EpisodeModel with _$EpisodeModel {
+class EpisodeModel with _$EpisodeModel {
   const factory EpisodeModel({
     required String id,
     required String name,

@@ -1,14 +1,6 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:functional_enum_annotation/functional_enum_annotation.dart';
 
-part 'gender.freezed.dart';
+part 'gender.g.dart';
 
-@freezed
-abstract class Gender with _$Gender {
-  const factory Gender.female() = Female;
-
-  const factory Gender.genderless() = Genderless;
-
-  const factory Gender.male() = Male;
-
-  const factory Gender.unknown() = Unknown;
-}
+@functionalEnum
+enum Gender { female, genderless, male, unknown }
